@@ -7,11 +7,6 @@
     --police_taille_nav : 16px;
 }
 
-body {
-    font-family: Inter;
-    /*font-size: 16px;*/
-}
-
 /* ------------ Barre de navigation ---------------*/
 header {
     position: fixed;
@@ -24,23 +19,21 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    border-top: solid 15px;
+    border-top: solid 20px;
     border-top-color: var(--couleur_top);
 }
 
-/*nav {
-    justify-content: space-between;
-    align-items: center;
-}*/
+nav {
+    font-size: 17px;
+}
 
 header ul {
     display: flex;
 }
 
 header li {
-    margin: 6px;
     padding: 10px 30px;
-    font-size: var(--police_taille_nav);
+    margin-top: 40px;
 }
 
 header a {
@@ -51,7 +44,8 @@ header a {
 #don {
     background-color: var(--couleur_don);
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 35px;
+    margin-right: 30px;
 }
 
 #don a{
@@ -59,8 +53,16 @@ header a {
     font-weight: bold;
 }
 
-#logo {
-    width: 8.5%;
-    height: 80%;
+#logoNom{
+    display: flex;
+    margin-left: 50px;
 }
 
+#logo{
+    height: auto;
+    width: 155px;
+}
+
+#nom{
+    margin-left: 10px;
+}
