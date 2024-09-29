@@ -28,9 +28,10 @@ header {
     border-top-color: var(--couleur_top);
 }
 
-#nav {
-    width: 70%;
-}
+/*nav {
+    justify-content: space-between;
+    align-items: center;
+}*/
 
 header ul {
     display: flex;
@@ -51,7 +52,6 @@ header a {
     background-color: var(--couleur_don);
     border-radius: 10px;
     margin-left: 100px;
-    position: ;
 }
 
 #don a{
