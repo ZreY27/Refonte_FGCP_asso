@@ -1,0 +1,186 @@
+:root{
+    /* PALETTE*/
+    --couleur_top : #FF90B0;
+    --couleur_nav : #FFE6E6;
+    --couleur_don : #E75462;
+    --couleur_don_hover : #fb3848;
+    --couleur_zone_texte_rose : #FDE7EA;
+    --couleur_zone_texte_titre : #4F2929;
+    --couleur_zone_texte_sous_titre : #E75462;
+    --couleur_fond_rose : #FCE8E8;
+    /* TAILLE POLICE */
+    --police_taille_nav : 16px;
+}
+
+/*----------------page don------------------*/
+#faire_don{
+    background-color: var(--couleur_fond_rose);
+    width: 40%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em 1em 2em 1em;
+    border-radius: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#img_don{
+    width: 2em;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#faire_don p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.merci{
+    text-align:center;
+    margin-bottom: 6%;
+}
+
+.mot_rouge{
+    color: #FF0000;
+}
+/*vérifier si ca doit etre la le stat*/
+.stats a{
+    color: #2085AD;
+    text-decoration: none;
+}
+
+#lien1{
+    color: deepskyblue;
+}
+.titre{
+    width:20%;
+    color: #E75462;
+}
+
+#par_carte {
+    display: flex;
+    margin-top: 5%;
+}
+
+#carte_texte{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+}
+
+#carte_texte h3{
+    font-style: italic;
+    color: #4F2929;
+}
+
+#carte_texte p{
+    display: inline-block;
+    width:100%;
+    vertical-align:top;
+    margin: 0 2.5%;
+
+}
+
+#bloc_img_btn{
+    margin-left:36%;
+}
+
+#bloc_img_btn button{
+    padding: 10px 20px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 260px;
+    word-wrap: break-word;
+    border-radius: 15px;
+    font-size: 22px;
+}
+
+
+#bloc_img_btn button:hover {
+    background-color: #68BE53;
+}
+
+#bloc_img_btn img{
+    margin-left: 3%;
+    width: 150px;
+}
+
+
+
+#par_cheque{
+    display: flex;
+    padding-bottom: 50px;
+    background-color: #FDE7EA;
+    margin-top: 80px;
+}
+
+#cheque{
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 310px;
+    height: 210px;
+
+}
+#cheque_text {
+    margin-top : 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#cheque_text h3{
+    color: #4F2929;
+    font-style: italic;
+
+}
+#cheque_text p{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#par_virement {
+    display: flex;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-bottom: 10%;
+}
+#virement_text{
+    margin-left: 6%;
+}
+
+#virement_text h3{
+    color: #4F2929;
+    font-style: italic;
+
+}
+#virement_text p{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#virement{
+    margin-right: 6%;
+    margin-left: 4.5%;
+}
+
+#lien{
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+#lien:hover{
+    color: darkblue;
+}
+
+#coeur{
+    width: 5%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

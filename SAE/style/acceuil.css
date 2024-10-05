@@ -1,0 +1,120 @@
+/* ------------ DEBUT page accueil---------------*/
+
+/* design du bouton */
+
+.titre-don{
+    text-align: center;
+    font-style:italic;
+    color: #E75462;
+    padding-top:30px;
+}
+
+.button-container {
+    text-align: center; /* Centre le bouton */
+    margin-top: 15px; /* Espace au-dessus du bouton */
+}
+
+.custom-button {
+    background-color: #E75462;
+    color: white; /* Texte blanc */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 30px; /* Arrondir les bords */
+    padding: 15px 40px; /* Espacement interne */
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 16px; /* Taille de police */
+    cursor: pointer; /* Changer le curseur au survol */
+    transition: background-color 0.3s; /* Effet de transition */
+}
+
+.custom-button:hover {
+    background-color: #FF90B0; /* Couleur au survol */
+}
+
+/*fin de design du bouton*/
+
+.zoneText{
+    padding: 20px;
+    background-color: #FFE6E6;
+    text-align:center;
+}
+
+.zoneText h2{
+
+    margin-bottom: 20px;
+    color: #4F2929;
+    font-style: italic;
+}
+
+
+.aligner{
+    display:flex;
+}
+.AlignText{
+    display: inline-block;
+    width:45%;
+    vertical-align:top;
+    margin: 0 2.5%;
+
+}
+
+.AlignText h3{
+    font-style: italic;
+    color: #E75462;
+}
+
+.zoneText p{
+    font-size: 13pt;
+    text-align:left;
+
+}
+
+/*design stat*/
+
+.stats{
+    text-align:center;
+    margin: 50px;
+}
+
+.stat{
+    margin-top: 50px;
+}
+.stats h1{
+    color: #4F2929;
+    font-style: italic;
+}
+
+/*fin design stat*/
+
+/*début design ruban vert*/
+
+/*.ruban{
+    padding:20px;
+    width: 100%;
+    position:absolute;
+    background-color: var(--couleur_nav);
+
+}
+*/
+
+/*#ruban-vert{
+    width: 100px;
+}
+
+.ruban h3{
+    padding-top: 30px;
+}*/
+
+.ruban{
+    text-align:center;
+    background-color: var(--couleur_zone_texte_rose);
+    margin-top: 3%;
+    padding: 1% 0;
+}
+
+.ruban img{
+    width: 10%;
+    height: auto;
+}
+
+/*fin design ruban vert*/

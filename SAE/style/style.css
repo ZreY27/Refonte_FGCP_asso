@@ -3,34 +3,26 @@
     --couleur_top : #FF90B0;
     --couleur_nav : #FFE6E6;
     --couleur_don : #E75462;
-    --couleur_don_hover : #fb3848;
-    --couleur_zone_texte_rose : #FFE6E6;
-    --couleur_zone_texte_titre : #4F2929;
-    --couleur_zone_texte_sous_titre : #E75462;
-    --couleur_fond_rose : #FCE8E8;
     /* TAILLE POLICE */
     --police_taille_nav : 16px;
 }
 
 /* ------------ Barre de navigation ---------------*/
 header {
-    position: sticky;
+    position: static;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1;
+    padding: 10px;
     background-color: var(--couleur_nav);
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     align-items: center;
     display: flex;
     border-top: solid 20px;
     border-top-color: var(--couleur_top);
-    box-shadow: rgba(17, 12, 46, 0.15) 0 15px 15px 0;
 }
 
 nav {
     font-size: 17px;
-    transform: translateX(-10%);
 }
 
 header ul {
@@ -38,8 +30,8 @@ header ul {
 }
 
 header li {
-    padding: 10px 25px;
-    margin-top: 8%;
+    padding: 10px 30px;
+    margin-top: 40px;
 }
 
 header a {
@@ -59,18 +51,18 @@ header a {
     font-weight: bold;
 }
 
-#don:hover{
-    transition: 0.3s;
-}
-
 #logoNom{
     display: flex;
-    margin-left: 3%;
+    margin-left: 50px;
 }
 
 #logo{
     height: auto;
-    width: 23%;
+    width: 155px;
+}
+
+#nom{
+    margin-left: 10px;
 }
 
 /* ------------ FIN Barre de navigation ---------------*/
@@ -79,199 +71,26 @@ header a {
 
 /* ------------ Titre ---------------*/
 .titre{
-    padding: 1%;
-    width: 30%;
-    margin-top: 3%;
+    padding: 10px;
+    width: 260px;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     background-color: var(--couleur_nav);
-    line-height: 170%;
+    line-height: 45px;
     text-align: center;
     color: darkred;
 
 }
 /* ------------ FIN Titre ---------------*/
 
-/* ------------ DEBUT page accueil---------------*/
-/* design du bouton */
-.titre-don{
-    text-align: center;
-    font-style:italic;
-    color: var(--couleur_don);
-    padding-top : 2%;
-}
-.button-container {
-    text-align: center; /* Centre le bouton */
-    margin-top: 1%; /* Espace au-dessus du bouton */
-}
-.custom-button {
-    background-color: var(--couleur_don);
-    color: white; /* Texte blanc */
-    border: none; /* Supprime la bordure par défaut */
-    border-radius: 30px; /* Arrondir les bords */
-    padding: 0.8% 2%; /* Espacement interne */
-    margin-bottom: 2%;
-    margin-top: 2%;
-    font-size: 16px; /* Taille de police */
-    cursor: pointer; /* Changer le curseur au survol */
-    transition: background-color 0.3s; /* Effet de transition */
-}
-.custom-button:hover {
-    background-color: var(--couleur_don_hover); /* Couleur au survol */
-    padding: 1% 2%;
-    font-size: 19px;
-    transition: .3s;
-}
 
 
-/*fin de design du bouton*/
-.zoneText{
-    padding: 1%;
-    background-color: var(--couleur_zone_texte_rose);
-    text-align:center;
-}
-.zoneText h2{
-    margin-bottom: 1%;
-    color: var(--couleur_zone_texte_titre);
-    font-style: italic;
-}
-.aligner{
-    display:flex;
-}
-.AlignText{
-    display: inline-block;
-    width:45%;
-    vertical-align:top;
-    margin: 0 2.5%;
-}
-.AlignText h3{
-    font-style: italic;
-    color: var(--couleur_zone_texte_sous_titre);
-}
-.zoneText p{
-    font-size: 16px;
-    text-align:left;
-}
-/*design stat*/
-.stats{
-    text-align:center;
-}
-/*fin design stat*/
-/* ------------ Fin Page Accueil ---------------*/
 
 
-/* ------------ Page présentation ---------------*/
-*{
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 
-.wrapper{
-    display: flex;
-    justify-content :center;
-    margin-top: inherit;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    width: 85%;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-
-}
-
-#logo1{
-    max-width : 12%;
-    float: left;
-    margin-right: 2%;
-}
-
-.tesxt-box h3{
-    font-size: 25px;
-    font-style: oblique;
-    color: var(--couleur_zone_texte_titre);
-}
-
-.tesxt-box p{
-    font-size: 16px;
-    margin: 0 2%; /* Espace sur les côtés */
-    text-align: justify; /* Justifie le texte */
-    line-height: 1.6;
-}
-
-
-/*partie liste */
-
-.liste{
-    padding: 1%;
-    margin-top: 3%;
-    margin-left: auto;
-    margin-right: auto;
-
-    border-radius: 30px;
-    background-color: var(--couleur_nav);
-    line-height: 45px;
-
-}
-.liste h3{
-    text-align: left;
-    margin-left: 4%;
-    font-style: oblique;
-    color: var(--couleur_zone_texte_titre);
-    font-size: 25px;
-}
-
-.un {
-    list-style-position: inside;
-    list-style-type: circle;
-    padding-left: 8%;
-}
-
-/* ------------ FIN page présentation---------------*/
-
-/*----------------page don------------------*/
-#faire_don{
-    background-color: var(--couleur_fond_rose);
-    width: 40%;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding: 1em 1em 2em 1em;
-    border-radius: 40px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#img_don{
-    width: 2em;
-    height: auto;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#faire_don p{
-    font-size: 25px;
-    text-align: center;
-}
-
-.mot_rouge{
-    color: #FF0000;
-}
-
-.stats a{
-    color: #2085AD;
-    text-decoration: none;
-}
-
-#coeur{
-    width: 5%;
-    height: auto;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 /* ------------ Footer ---------------*/
 footer{
@@ -283,28 +102,16 @@ footer{
 
 .top_footer{
     display: flex;
+    justify-content: space-around;
 
-    .liens{
+    .liens, .contact{
         margin-top: 3%;
-        transform: translateX(30%);
     }
 
-    .contact{
-        margin-top: 3%;
-        transform: translateX(120%);
+    .contactAll, .liensAll{
+        display: flex;
     }
-}
 
-#facebook, #formulaire, #qr {
-    position : relative;
-    bottom: 40%;
-    left: 105%;
-}
-
-#livret, #mentions{
-    position : relative;
-    bottom: 28%;
-    left: 108%;
 }
 
 #droits{
@@ -327,3 +134,4 @@ footer a{
 footer a:hover{
     color : dimgrey;
 }
+/* ------------ FIN Footer ---------------*/
