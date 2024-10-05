@@ -1,70 +1,168 @@
 /* ------------ Page présentation ---------------*/
 *{
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
+/* ------------ Titre de la page ---------------*/
+.titre{
+    padding: 1%;
+    width: 30%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: var(--couleur_nav);
+    line-height: 170%;
+    text-align: center;
+    color: darkred;
+}
+/* ------------ FIN Titre de la page ---------------*/
 
 .wrapper{
     display: flex;
     justify-content :center;
-    margin-top: inherit;
-    margin-bottom: 5px;
-    margin-left: 10%;
-    width: 85%;
+    margin-left: 5%;
+    margin-right: 5%;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     flex-direction: column;
 
 }
 
 #logo1{
-    max-width : 250px;
+    max-width : 17%;
     float: left;
-    margin-right: 25px;
+    margin-right: 2%;
 }
 
-.tesxt-box h3{
+.text-box h3, .election h3{
     font-size: 25px;
     font-style: oblique;
-    color: #4F2929;
+    color: var(--couleur_zone_texte_titre);
 }
 
-.tesxt-box p{
-    font-size: 20px;
-    margin: 0 20px; /* Espace sur les côtés */
-    text-align: justify; /* Justifie le texte */
+.text-box p{
+    font-size: 16px;
+    margin: 0 2%;
+    text-align: justify;
     line-height: 1.6;
 }
 
 
 /*partie liste */
 
-.liste{
-    padding: 10px;
-    margin-top: 40px;
+.liste, .bureau{
+    padding: 1%;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
 
     border-radius: 30px;
     background-color: var(--couleur_zone_texte_rose);
     line-height: 45px;
-
-
-
 }
-.liste h3{
+
+.liste h3, .bureau h3{
     text-align: left;
-    margin-left: 100px;
+    margin-left: 4%;
     font-style: oblique;
-    color: #4F2929;
+    color: var(--couleur_zone_texte_titre);
     font-size: 25px;
 }
 
-.un {
-    list-style-position: inside;
+.objectifs_detail{
+    text-align: justify;
+    line-height: 2;
+    list-style-position: outside;
     list-style-type: circle;
-    padding-left: 150px;
+    margin-left: 5%;
+    margin-right: 8%;
 }
 
+.objectifs{
+    display: flex;
+}
+
+.img_objectif{
+    transform: translateY(7%);
+}
+/********/
+
+/**** election ****/
+.election{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.thierry, .claire{
+    display: flex;
+}
+
+.nouveau_pres h4, .ancien_pres h4{
+    color: var(--couleur_zone_texte_sous_titre);
+    font-style: oblique;
+}
+
+.pres{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+#thierryGauche{
+    position: absolute;
+    transform: translateX(-10%);
+    width: 2%;
+}
+#thierryDroit{
+    position : absolute;
+    transform: translateX(3200%);
+    width: 2%;
+}
+
+#claireGauche{
+    position: absolute;
+    transform: translateX(-10%);
+    width: 2%;
+}
+#claireDroit{
+    position : absolute;
+    transform: translateX(3050%);
+    width: 2%;
+}
+
+#imageClaire{
+    width: 110%;
+    height: auto;
+    transform: translateY(30%);
+}
+
+#thierry_img{
+    width: 80%;
+    height: auto;
+    transform: translateY(20%);
+}
+/**** fin election ****/
+
+.compo {
+    display: flex;
+    justify-content: center;
+}
+
+.img_bureau {
+    width: 50%; /* ou une autre taille fixe */
+    height: auto; /* Laissez le navigateur ajuster la hauteur */
+}
+
+.photoNom{
+    text-align: center;
+}
+
+.nom{
+    line-height: 1%;
+}
+.role{
+    line-height: 1%;
+    font-size: 14px;
+    margin-bottom: 20%;
+}
 /* ------------ FIN page présentation---------------*/

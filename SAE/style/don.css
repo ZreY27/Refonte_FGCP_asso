@@ -55,8 +55,10 @@
 #lien1{
     color: deepskyblue;
 }
+
 .titre{
     width:20%;
+    margin-left: 2%;
     color: #E75462;
 }
 
@@ -68,6 +70,7 @@
     margin-top: 5%;
     margin-bottom: 3%;
     margin-left: 5%;
+    line-height: 1.5;
 }
 
 #carte_texte h3{
@@ -131,6 +134,7 @@
     margin-top : 40px;
     margin-left: 40px;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 #cheque_text h3{
@@ -151,6 +155,7 @@
 }
 #virement_text{
     margin-left: 6%;
+    line-height: 1.5;
 }
 
 #virement_text h3{
