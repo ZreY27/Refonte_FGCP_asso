@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style/style.css">
-        <script language="JavaScript" src="script/script.js"></script>
-        <title>Don</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body style="font-family: Arial">
-        <header>
-            <div id="logoNom">
-                <img id="logo" src="img/logo_FGCP.png" alt="logo FGCP" />
-                <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
-            </div>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/don.css">
 
-            <nav>
-                <ul type="none">
-                    <li><a href="accueil.html" title="Accueil">Accueil</a></li>
-                    <li><a href="presentation.html" title="Présentation de la FGCP">Qui sommes-nous</a></li>
-                    <li><a href="actus.html" title="Voir la page d'actualité">Actus</a></li>
-                    <li id="don"><a href="don.html" title="Faire un don">Faire un don</a></li>
-                </ul>
-            </nav>
-        </header>
+    <script language="JavaScript" src="script/script.js"></script>
+    <title>Don</title>
+</head>
 
-        <div id="faire_don">
-            <p>Faire un <span class ="mot_rouge">don</span> à notre association</p>
-            <img id="img_don" src="img/don.png">
+<body style="font-family: Arial">
+<header>
+    <div id="logoNom">
+        <img id="logo" src="img/logo_FGCP.png" alt="logo FGCP" />
+        <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
+    </div>
+
+    <nav>
+        <ul type="none">
+            <li><a href="accueil.html" title="Accueil">Accueil</a></li>
+            <li><a href="presentation.html" title="Présentation de la FGCP">Qui sommes-nous</a></li>
+            <li><a href="actus.html" title="Voir la page d'actualité">Actus</a></li>
+            <li id="don"><a href="don.html" title="Faire un don">Faire un don</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="faire_don">
+    <p>Faire un <span class ="mot_rouge">don</span> à notre association</p>
+    <img id="img_don" src="img/don.png">
+</div>
+
+<p class="merci">
+    Nous vous remercions de tout coeur ! <br>
+    Votre don permettra de soutenir la Fédération France Greffes Cœur et/ou Poumons <br>
+    dans l’ensemble de ses actions. <br><br>
+    <a id="lien1" href="presentation.html"> Cliquez pour en savoir plus sur les objectifs de notre association.</a>
+</p>
+
+<h2 class="titre">Comment faire un don?</h2>
+
+<div id="par_carte ">
+    <div id="carte_texte">
+        <h3>Par carte Bancaire via Paypal</h3>
+        <p>Ce moyen de paiement sécurisé en ligne vous permet de faire un don rapidement et facilement.
+            <br><br>Le don par paypal est entièrement sécurisé. Il ne nécessite aucune inscription, juste une carte bancaire.
+            Il suffit de cliquer sur la mention « Vous n’avez pas de compte PayPal ? ».
+            <br><br>
+            Toutefois, si vous posséder un compte paypal, vous pourrez payer avec celui-ci.</p>
+    </div>
+    <div id="bloc_img_btn">
+        <button>Faire un don par carte bancaire via Paypal</button>
+        <img id="img_carte" src="img/bancaire.png">
+    </div>
+</div>
+
+    <div id="par_cheque">
+        <img id="cheque"  src="img/cheque.png">
+        <div id="cheque_text">
+            <h3>Par chèque</h3>
+            <p>Pour faire un don par chèque, remplissez le et libellez à l'ordre de :<br>"Fédération France Greffes Cœur et/ou Poumons" et envoyez-le à l'adresse suivante : <br><br><b>Fédération France Greffes Cœur et/ou Poumons<br>36 rue Petit<br>75019 PARIS</b></p>
         </div>
+        </div>
+    </div>
 
-        <p class="stats">
-            Nous vous remercions de tout coeur ! <br>
-             Votre don permettra de soutenir la Fédération France Greffes Cœur et/ou Poumons <br>
-            dans l’ensemble de ses actions. <br><br>
-            <a href="presentation.html"> Cliquez pour en savoir plus sur les objectifs de notre association.</a>
-        </p>
+    <div id="par_virement">
+        <div id="virement_text">
+            <h3>Par virement</h3>
+            <p>C'est la solution la plus rapide !<br><br>
+                La Fédération France Greffes Cœur et/ou Poumons utilise un compte bancaire. Vous aurez toutes nos coordonnées en nous contactant par le biais de notre email:
+                <br><br>
+                <a id= "lien" href="francegreffecoeurpoumon@gmail.com">francegreffecoeurpoumon@gmail.com</a></b></p>
+        </div>
+        <img id="virement"  src="img/virement.png">
+    </div>
 
-        <h2 class="titre">Comment faire un don?</h2>
-
-        <img id="coeur" src="img/coeur.png">
+<img id="coeur" src="img/coeur.png">
 
 
-        <footer>
-            <div class="top_footer">
-                <div class="liens">
-                    <h3>Liens</h3>
+<footer>
+    <div class="top_footer">
+        <div class="liens">
+            <h3>Liens</h3>
+            <div class="liensAll">
+                <div class="liens1">
                     <p id="faq"><a href="http://www.france-coeur-poumon.asso.fr/faq.php">
                         <img src="img/footer/faq.png" alt="FAQ" class="image">FAQ sur le greffe et ses dérivés</a></p>
                     <p id="plan"><a href="http://www.france-coeur-poumon.asso.fr/plan_du_site.php">
                         <img src="img/footer/plan.png" alt="Plan du site" class="image">Plan du site</a></p>
+                </div>
+                <div class="liens2">
                     <p id="livret"><a href="http://www.france-coeur-poumon.asso.fr/news/2024/pdf/00115_Livret_des_30_ans_de_la_FGCP.pdf">
                         <img src="img/footer/livret.png" alt="Livret" class="image">Livret des 30 ans</a></p>
                     <p id="mentions"><a href="http://www.france-coeur-poumon.asso.fr/legal.php">
                         <img src="img/footer/mentions.png" alt="Mentions légales" class="image">Mentions légales</a></p>
                 </div>
-                <div class="contact">
-                    <h3>Contact</h3>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Contact</h3>
+            <div class="contactAll">
+                <div class="conctact1">
                     <p id="adresse"><img src="img/footer/adresse.png" alt="Adresse" class="image">
                         Fédération France Greffes Cœur<br>et/ou Poumons<br>36 rue Petit, 75019 PARIS</p>
                     <p id="telephone"><img src="img/footer/phone.png" alt="Numéro de téléphone" class="image">06 60 72 70 14</p>
+                </div>
+                <div class="contact2">
                     <p id="formulaire"><a href="http://www.france-coeur-poumon.asso.fr/contact/contactus.php">
                         <img src="img/footer/mail.png" alt="Formulaire de contact" class="image">Formulaire de contact</a></p>
                     <p id="facebook"><a href="https://www.facebook.com/greffeducoeur/">
@@ -67,13 +117,15 @@
                         <img src="img/footer/qr_code.png" alt="QR Code" class="image">Télécharger notre QR Code</a></p>
                 </div>
             </div>
-            <div class="bottom_footer">
-                <div id="droits">
-                    <p>© 2024 Tous droits réservés</p>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="bottom_footer">
+        <div id="droits">
+            <p>© 2024 Tous droits réservés</p>
+        </div>
+    </div>
 
-        </footer>
-    </body>
+</footer>
+</body>
 
 </html>
