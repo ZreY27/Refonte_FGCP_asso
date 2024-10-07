@@ -3,19 +3,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* ------------ Titre de la page ---------------*/
-.titre{
-    padding: 1%;
-    width: 30%;
-    margin-top: 3%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    background-color: var(--couleur_nav);
-    line-height: 170%;
-    text-align: center;
-    color: darkred;
-}
+
 /* ------------ FIN Titre de la page ---------------*/
 
 .wrapper{
@@ -60,6 +48,11 @@
     border-radius: 30px;
     background-color: var(--couleur_zone_texte_rose);
     line-height: 45px;
+}
+
+.bureau{
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .liste h3, .bureau h3{

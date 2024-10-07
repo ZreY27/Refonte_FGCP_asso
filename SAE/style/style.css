@@ -2,7 +2,7 @@
     /* PALETTE*/
     --couleur_top : #FF90B0;
     --couleur_nav : #FFE6E6;
-    --couleur_don : #E75462;
+    --couleur_don : #ff5a69;
     --couleur_don_hover : #fb3848;
     --couleur_zone_texte_rose : #FDF2F4;
     --couleur_zone_texte_titre : #4F2929;
@@ -10,6 +10,10 @@
     --couleur_fond_rose : #FCE8E8;
     /* TAILLE POLICE */
     --police_taille_nav : 16px;
+}
+
+body { /* a changer : exclure le header */
+    margin: 0 8%;
 }
 
 /* ------------ Barre de navigation ---------------*/
@@ -59,7 +63,10 @@ header a {
 }
 
 #don:hover{
-    transition: 0.3s;
+    background-color: rgba(255, 90, 105, 0.87); /* Couleur au survol */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: scale(1.01);
+    transition: .2s;
 }
 
 #logoNom{
@@ -78,13 +85,25 @@ header a {
 }
 /* ------------ FIN Barre de navigation ---------------*/
 
+/* ------------ Titre de la page ---------------*/
+.titre{
+    padding: 1%;
+    width: 30%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: var(--couleur_nav);
+    line-height: 170%;
+    text-align: center;
+    color: darkred;
+}
 
 /* ------------ Footer ---------------*/
 footer{
     width: 100%;
     background-color: #EDEDED;
     padding: 0.6%;
-    margin-top: 3%;
     box-sizing: border-box;
 }
 

@@ -2,7 +2,7 @@
 /*----------------page don------------------*/
 #faire_don{
     background-color: var(--couleur_fond_rose);
-    width: 40%;
+    width: 30em;
     margin-top: 3em;
     margin-bottom: 3em;
     padding: 1em 1em 2em 1em;
@@ -80,7 +80,7 @@
 
 #bloc_img_btn button{
     padding: 10px 20px;
-    background-color: yellowgreen;
+    background-color: #68BE53;
     color: white;
     border: none;
     cursor: pointer;
@@ -92,8 +92,22 @@
 
 
 #bloc_img_btn button:hover {
-    background-color: #68BE53;
+    background-color: #73d15c;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: scale(1.01);
+    transition: .2s;
 }
+
+
+.button-79:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+.button-79:not(:disabled):hover:active {
+
+}
+
+
 
 #bloc_img_btn img{
     margin-left: 3%;
