@@ -12,9 +12,11 @@
     --police_taille_nav : 16px;
 }
 
-body { /* a changer : exclure le header */
+body > *:not(header) { /* tous les fils du body sauf le header*/
     margin: 0 8%;
 }
+
+
 
 
 /* ------------ Barre de navigation ---------------*/
@@ -103,7 +105,7 @@ header a {
 .ancre {
     position: fixed;
     bottom: 20px;
-    right: 10%;
+    right: 5%;
     display: none;
     opacity: 0.6;
     transition: opacity 0.3s ease;
@@ -119,45 +121,60 @@ header a {
 }
 
 /* ------------ Footer ---------------*/
-footer{
-    width: 100%;
+footer {
     background-color: #EDEDED;
     padding: 0.6%;
     box-sizing: border-box;
 }
 
-.top_footer{
+.top_footer {
     display: flex;
     justify-content: space-around;
-
-    .liens, .contact{
-        margin-top: 3%;
-    }
+    width: 100%; /* Assurer que l'espace est bien réparti */
 }
 
-.contactAll, .liensAll{
+.top_footer .liens,
+.top_footer .contact {
+    margin-top: 3%;
+    width: 45%; /* Assure que les colonnes ne dépassent pas et sont équilibrées */
+}
+
+.contactAll, .liensAll {
     display: flex;
+    justify-content: space-between;
+    width: 100%; /* Gérer la largeur des liens et contacts */
+    box-sizing: border-box;
 }
 
-#droits{
+.liensAll .liens1,
+.liensAll .liens2,
+.contactAll .conctact1,
+.contactAll .contact2 {
+    flex: 1;
+    margin-right: 8px; /* Espace entre les colonnes */
+}
+
+footer .image {
+    margin-right: 7px; /* L'image garde son petit décalage à droite */
+}
+
+footer p {
+    padding: 10px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: dimgrey;
+}
+
+#droits {
     margin: auto;
     text-align: center;
 }
 
-.image{
-    margin-right: 7px;
-}
-
-footer p{
-    padding: 10px;
-}
-
-footer a{
-    color: black;
-}
-
-footer a:hover{
-    color : dimgrey;
-}
 
 /* ------------ FIN Footer ---------------*/

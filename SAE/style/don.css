@@ -3,8 +3,7 @@
 #faire_don{
     background-color: var(--couleur_fond_rose);
     width: 30em;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin: 3em 0;
     padding: 1em 1em 2em 1em;
     border-radius: 40px;
     position: relative;
@@ -99,16 +98,6 @@
 }
 
 
-.button-79:not(:disabled):hover {
-    transform: scale(1.05);
-}
-
-.button-79:not(:disabled):hover:active {
-
-}
-
-
-
 #bloc_img_btn img{
     margin-left: 3%;
     width: 150px;
@@ -187,6 +176,8 @@
     width: 5%;
     height: auto;
     position: relative;
+    margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 3% !important;
 }
