@@ -32,14 +32,14 @@
 .mot_rouge{
     color: #FF0000;
 }
-/*vérifier si ca doit etre la le stat*/
-.stats a{
+
+#lien1{
     color: #2085AD;
     text-decoration: none;
 }
 
-#lien1{
-    color: deepskyblue;
+#lien1:hover{
+    text-decoration: underline;
 }
 
 .titre{

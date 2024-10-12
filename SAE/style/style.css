@@ -53,6 +53,10 @@ header a {
     text-decoration: none;
 }
 
+header a:hover:not(#don a){
+    text-decoration: underline;
+}
+
 #don {
     background-color: var(--couleur_don);
     border-radius: 10px;
@@ -168,7 +172,7 @@ footer a {
 }
 
 footer a:hover {
-    color: dimgrey;
+    text-decoration: underline;
 }
 
 #droits {
