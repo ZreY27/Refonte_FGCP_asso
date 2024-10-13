@@ -49,18 +49,19 @@ header ul li:before {
     scale: 0 1;
     transition: .3s, translate 0s .3s;
 }
-header ul:hover li:before {
-    scale: 1;
-}
+
 header ul li:hover:before {
+    scale: 1;
     translate: 0;
     transition: .1s;
 }
-header ul:hover li:has(~ li:hover):before {
+
+header ul li:has(~ li:hover):before {
     translate: 100% 0;
     transition: .2s .2s,scale 0s .4s;
 }
-header ul:hover li:hover ~ li:before {
+
+header ul li:hover ~ li:before {
     translate: -100% 0;
     transition: .2s .2s,scale 0s .4s;
 }
@@ -70,7 +71,6 @@ header ul:hover li:hover ~ li:before {
 nav {
     font-size: 17px;
     margin-top: 1.5%;
-    transform: translateX(15%);
 }
 
 header ul {
@@ -109,7 +109,7 @@ header a {
 
 #logoNom{
     display: flex;
-
+    justify-content: center;
 }
 
 .menu{
@@ -117,7 +117,7 @@ header a {
 }
 
 #logo{
-    height: auto;
+    height: fit-content;
     width: 14%;
     margin: 0.5%;
 }
