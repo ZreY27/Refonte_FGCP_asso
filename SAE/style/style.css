@@ -12,11 +12,9 @@
     --police_taille_nav : 16px;
 }
 
-body > *:not(header) { /* tous les fils du body sauf le header*/
+body > *:not(header, footer) { /*mettre un margin sur tous les fils du body sauf le header et le footer*/
     margin: 0 8%;
 }
-
-
 
 
 /* ------------ Barre de navigation ---------------*/
@@ -32,11 +30,47 @@ header {
     border-top: solid 20px;
     border-top-color: var(--couleur_top);
     box-shadow: rgba(17, 12, 46, 0.15) 0 15px 15px 0;
+    margin-bottom: 3%;
 }
+
+/*---- Animation de la nav ------*/
+header ul li {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .1s;
+}
+
+header ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* 3px = l'épaisseur */
+    background: var(--couleur_don);
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+}
+header ul:hover li:before {
+    scale: 1;
+}
+header ul li:hover:before {
+    translate: 0;
+    transition: .1s;
+}
+header ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s,scale 0s .4s;
+}
+header ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s,scale 0s .4s;
+}
+/*---- FIN Animation de la nav ------*/
+
 
 nav {
     font-size: 17px;
-    transform: translateX(-10%);
+    margin-top: 1.5%;
+    transform: translateX(15%);
 }
 
 header ul {
@@ -44,32 +78,29 @@ header ul {
 }
 
 header li {
-    padding: 10px 25px;
+    padding: 10px 20px;
     margin-top: 8%;
 }
+
 
 header a {
     color: black;
     text-decoration: none;
 }
 
-header a:hover:not(#don a){
-    text-decoration: underline;
-}
-
-#don {
+.don {
     background-color: var(--couleur_don);
     border-radius: 10px;
     margin-left: 35px;
     margin-right: 30px;
 }
 
-#don a{
+.don a{
     color: white !important;
     font-weight: bold;
 }
 
-#don:hover{
+.don:hover{
     background-color: rgba(255, 90, 105, 0.87); /* Couleur au survol */
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: scale(1.01);
@@ -78,8 +109,7 @@ header a:hover:not(#don a){
 
 #logoNom{
     display: flex;
-    margin-left: 3%;
-    margin-right: 10%;
+
 }
 
 .menu{
@@ -88,9 +118,18 @@ header a:hover:not(#don a){
 
 #logo{
     height: auto;
-    width: 23%;
+    width: 14%;
+    margin: 0.5%;
+}
+
+#navMobile{
+    display: none;
+}
+#menuMobile{
+    display: none;
 }
 /* ------------ FIN Barre de navigation ---------------*/
+
 
 /* ------------ Titre de la page ---------------*/
 .titre{
@@ -129,6 +168,7 @@ footer {
     background-color: #EDEDED;
     padding: 0.6%;
     box-sizing: border-box;
+    margin-top: 1%;
 }
 
 .top_footer {
@@ -137,8 +177,7 @@ footer {
     width: 100%; /* Assurer que l'espace est bien réparti */
 }
 
-.top_footer .liens,
-.top_footer .contact {
+.liens, .contact {
     margin-top: 3%;
     width: 45%; /* Assure que les colonnes ne dépassent pas et sont équilibrées */
 }
@@ -150,10 +189,7 @@ footer {
     box-sizing: border-box;
 }
 
-.liensAll .liens1,
-.liensAll .liens2,
-.contactAll .conctact1,
-.contactAll .contact2 {
+.liens1, .liens2, .contact1, .contact2 {
     flex: 1;
     margin-right: 8px; /* Espace entre les colonnes */
 }
@@ -182,3 +218,73 @@ footer a:hover {
 
 
 /* ------------ FIN Footer ---------------*/
+
+
+
+
+
+
+@media only screen and (max-width: 680px) {
+    body{
+        background: #a37070;
+
+    }
+
+    /* ----------- Barre de navigation ------------- */
+    nav{
+        display: none;
+    }
+
+    #navMobile{
+        display: flex;
+    }
+
+    .don {
+        background-color: var(--couleur_don);
+        border-radius: 5px;
+        width: 70%;
+        height: 70%;
+        text-align: center;
+    }
+
+    #logoNom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #menuMobile {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 3%;
+        margin-left: auto;
+        margin-right: 2%;
+    }
+
+    #nom{
+        display: none;
+    }
+    #logo{
+        height: auto;
+        width: 25%;
+        margin: 2%;
+    }
+
+    /* ----------- FIN Barre de navigation ------------- */
+
+
+    /* ----------- Footer ------------- */
+
+    .top_footer {
+        display: block;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+    .liensAll, .contactAll{
+        display: ruby-text;
+    }
+
+}

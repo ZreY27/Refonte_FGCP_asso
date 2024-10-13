@@ -12,21 +12,25 @@
     </head>
 
     <body style="font-family: Arial">
-        <header>
-            <div id="logoNom">
-                <img id="logo" src="img/accueil/logo_FGCP.png" alt="logo FGCP" />
-                <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
-            </div>
-
+    <header>
+        <div id="logoNom">
+            <img id="logo" src="img/accueil/logo_FGCP.png" alt="logo FGCP" />
+            <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
             <nav>
                 <ul type="none">
                     <li><a href="accueil.html" title="Accueil">Accueil</a></li>
                     <li><a href="presentation.html" title="Présentation de la FGCP">Qui sommes-nous</a></li>
                     <li><a href="actus.html" title="Voir la page d'actualité">Actus</a></li>
-                    <li id="don"><a href="don.html" title="Faire un don">Faire un don</a></li>
+                    <li class="don"><a href="don.html" title="Faire un don"><b>Faire un don</b></a></li>
                 </ul>
             </nav>
-        </header>
+            <div id="navMobile">
+                <p class="don"><a href="don.html" title="Faire un don">Faire un don</a></p>
+                <img id="menuMobile" src="img/mobile/menu.png" alt="Menu">
+            </div>
+
+        </div>
+    </header>
         <div id="faire_don">
             <p>Faire un <span class ="mot_rouge">don</span> à notre association</p>
             <img id="img_don" src="img/don/don.png">
@@ -42,34 +46,40 @@
         <h2 class="titre">Comment faire un don?</h2>
 
         <div id="par_carte ">
-            <div id="carte_texte">
-                <h3>Par carte Bancaire via Paypal</h3>
-                <p>Ce moyen de paiement sécurisé en ligne vous permet de faire un don rapidement et facilement.
-                    <br>Le don par paypal est entièrement sécurisé. Il ne nécessite aucune inscription, juste une carte bancaire.
-                    Il suffit de cliquer sur la mention « Vous n’avez pas de compte PayPal ? ».
-                    <br>
-                    Toutefois, si vous posséder un compte paypal, vous pourrez payer avec celui-ci.</p>
-            </div>
-            <div id="bloc_img_btn">
-                <button>Faire un don par carte bancaire via Paypal</button>
-                <img id="img_carte" src="img/don/bancaire.png">
+            <div id="carte">
+                <div id="carte_texte">
+                    <h3>Par carte Bancaire via Paypal</h3>
+                    <p>Ce moyen de paiement sécurisé en ligne vous permet de faire un don rapidement et facilement.
+                        <br>Le don par paypal est entièrement sécurisé. Il ne nécessite aucune inscription, juste une carte bancaire.
+                        Il suffit de cliquer sur la mention « Vous n’avez pas de compte PayPal ? ».
+                        <br>
+                        Toutefois, si vous posséder un compte paypal, vous pourrez payer avec celui-ci.</p>
+                </div>
+                <div id="bloc_img_btn">
+                    <button>Faire un don par CB via Paypal</button>
+                    <img id="img_carte" src="img/don/bancaire.png" alt="cb">
+                </div>
             </div>
         </div>
 
         <div id="par_cheque">
-            <img id="cheque"  src="img/don/cheque.png">
+            <img id="cheque"  src="img/don/cheque.png" alt="chèque">
             <div id="cheque_text">
                 <h3>Par chèque</h3>
-                <p>Pour faire un don par chèque, remplissez le et libellez à l'ordre de :<br>"Fédération France Greffes Cœur et/ou Poumons" et envoyez-le à l'adresse suivante : <br><br><b>Fédération France Greffes Cœur et/ou Poumons<br>36 rue Petit<br>75019 PARIS</b></p>
+                <p>Pour faire un don par chèque, remplissez le et libellez à l'ordre de :<br>
+                    "Fédération France Greffes Cœur et/ou Poumons" et envoyez-le à l'adresse suivante : <br><br>
+                    <b>Fédération France Greffes Cœur et/ou Poumons<br>
+                        36 rue Petit,<br>75019 PARIS</b></p>
             </div>
-        </div>
+
         </div>
 
         <div id="par_virement">
             <div id="virement_text">
                 <h3>Par virement</h3>
                 <p>C'est la solution la plus rapide !<br><br>
-                    La Fédération France Greffes Cœur et/ou Poumons utilise un compte bancaire. Vous aurez toutes nos coordonnées en nous contactant par le biais de notre email:
+                    La Fédération France Greffes Cœur et/ou Poumons utilise un compte bancaire.
+                    Vous aurez toutes nos coordonnées en nous contactant par le biais de notre email:
                     <br><br>
                     <a id= "lien" href="francegreffecoeurpoumon@gmail.com">francegreffecoeurpoumon@gmail.com</a>
                 </p>

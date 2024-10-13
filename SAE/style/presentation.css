@@ -3,7 +3,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* ------------ FIN Titre de la page ---------------*/
 
 .wrapper{
     display: flex;
@@ -34,7 +33,7 @@
 }
 
 
-/*partie liste */
+/*------ Partie liste --------*/
 
 .liste, .bureau{
     padding: 1%;
@@ -43,11 +42,6 @@
     border-radius: 30px;
     background-color: var(--couleur_zone_texte_rose);
     line-height: 45px;
-}
-
-.bureau{
-    border-bottom-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
 }
 
 .liste h3, .bureau h3{
@@ -75,17 +69,18 @@
     width: 10%;
     height: 10%;
     position: relative;
-    bottom: -170px;
+    bottom: -140px;
     right: 8%;
 }
 
-/********/
+/*------ FIN Partie liste --------*/
 
-/**** election ****/
+/*------------ Elections -------------*/
 .election{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
 .thierry, .claire{
     display: flex;
 }
@@ -100,7 +95,7 @@
     margin-right: 2%;
 }
 
-
+/*Guillemets gauche et droit du texte de Thierry*/
 #thierryGauche{
     position: absolute;
     transform: translateX(-10%);
@@ -112,6 +107,7 @@
     width: 2%;
 }
 
+/*Guillemets gauche et droit du texte de Claire*/
 #claireGauche{
     position: absolute;
     transform: translateX(-10%);
@@ -123,6 +119,7 @@
     width: 2%;
 }
 
+/*Photo de Claire et Thierry*/
 #imageClaire{
     width: 110%;
     height: auto;
@@ -134,7 +131,8 @@
     height: auto;
     transform: translateY(20%);
 }
-/**** fin election ****/
+/*------------ FIN Elections -------------*/
+
 
 .compo {
     display: flex;
@@ -159,3 +157,8 @@
     margin-bottom: 20%;
 }
 /* ------------ FIN page présentation---------------*/
+
+
+@media only screen and (max-width: 680px){
+
+}

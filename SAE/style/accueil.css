@@ -40,6 +40,7 @@
     padding: 20px;
     background-color: var(--couleur_zone_texte_rose);
     text-align:center;
+    border-radius: 30px;
 }
 
 .zoneText h2{
@@ -91,6 +92,7 @@
     background-color: var(--couleur_zone_texte_rose);
     margin-top: 3%;
     padding: 1% 0;
+    border-radius: 30px;
 }
 
 .ruban img{
@@ -99,3 +101,32 @@
 }
 
 /*fin design ruban vert*/
+
+@media only screen and (max-width: 680px){
+    /*-------- "Pourquoi donner" --------*/
+    .zoneText{
+        padding: 10px;
+    }
+
+    .aligner{
+        display:block;
+    }
+
+    .AlignText{
+        display: block;
+        width: 95%;
+    }
+
+    .AlignText p{
+        text-align: justify;
+    }
+    /*-------- FIN "Pourquoi donner" --------*/
+
+
+    /*------ Image du ruban vert -------*/
+    .ruban img{
+        width: 20%;
+        height: auto;
+    }
+    /*------ FIN Image du ruban vert -------*/
+}
