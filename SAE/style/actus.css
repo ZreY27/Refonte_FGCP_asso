@@ -2,3 +2,22 @@
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
+
+.filtre{
+    background-color: var(--couleur_don);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 6em;
+    padding: .5em;
+    font-weight: bold;
+    opacity: .9;
+}
+
+.filtre:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: scale(1.01);
+    transition: .2s;
+    opacity: 1.3;
+}
