@@ -26,7 +26,7 @@ header {
     z-index: 1;
     background-color: var(--couleur_nav);
     align-items: center;
-    display: flex;
+    display: block;
     border-top: solid 20px;
     border-top-color: var(--couleur_top);
     box-shadow: rgba(17, 12, 46, 0.15) 0 15px 15px 0;
@@ -34,37 +34,31 @@ header {
 }
 
 /*---- Animation de la nav ------*/
-header ul li {
+header ul li a {
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: .1s;
 }
 
-header ul li:before {
+header ul li a:before {
     content: "";
     position: absolute;
-    inset: calc(100% - 3px) 0 0 0; /* 3px = l'épaisseur */
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 3px;
     background: var(--couleur_don);
     scale: 0 1;
     transition: .3s, translate 0s .3s;
 }
 
-header ul li:hover:before {
+header ul li a:hover:before {
     scale: 1;
     translate: 0;
     transition: .1s;
 }
 
-header ul li:has(~ li:hover):before {
-    translate: 100% 0;
-    transition: .2s .2s,scale 0s .4s;
-}
-
-header ul li:hover ~ li:before {
-    translate: -100% 0;
-    transition: .2s .2s,scale 0s .4s;
-}
 /*---- FIN Animation de la nav ------*/
 
 
@@ -122,8 +116,14 @@ header a {
     margin: 0.5%;
 }
 
+/* Ne pas afficher les éléments qui sont pour la version mobile */
 #navMobile{
     display: none;
+}
+#navVersionMobile{
+     position: relative;
+     text-align: center;
+     display: none;
 }
 #menuMobile{
     display: none;
@@ -142,7 +142,7 @@ header a {
     background-color: var(--couleur_nav);
     line-height: 170%;
     text-align: center;
-    color: darkred;
+    color: #E75462;
 }
 /* -------------Ancre-------------*/
 .ancre {
@@ -222,14 +222,20 @@ footer a:hover {
 
 
 
-
-
+/*--------------------------------- Version mobile -------------------------------------------------*/
 @media only screen and (max-width: 680px) {
-    body{
-        background: #a37070;
 
+    header{
+        padding-bottom: 0.5%;
     }
 
+    header ul{
+        display: block;
+    }
+
+    .menuVersionMobile{
+        border-color: black;
+    }
     /* ----------- Barre de navigation ------------- */
     nav{
         display: none;
@@ -237,13 +243,27 @@ footer a:hover {
 
     #navMobile{
         display: flex;
+        align-items: center;
+        margin-right : 4%;
+    }
+
+    #navVersionMobile {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    #navVersionMobile.active {
+        display: block;
+    }
+
+    #navVersionMobile li {
+        margin: 2%;
     }
 
     .don {
-        background-color: var(--couleur_don);
         border-radius: 5px;
-        width: 70%;
-        height: 70%;
+        width: 100%;
         text-align: center;
     }
 
@@ -261,6 +281,7 @@ footer a:hover {
         height: 3%;
         margin-left: auto;
         margin-right: 2%;
+        cursor : pointer;
     }
 
     #nom{
@@ -278,13 +299,13 @@ footer a:hover {
     /* ----------- Footer ------------- */
 
     .top_footer {
-        display: block;
-        margin-left: 7%;
-        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .liensAll, .contactAll{
-        display: ruby-text;
+    .liens, .contact {
+        width: 90%;
     }
 
+    /* ----------- FIN Footer ------------- */
 }

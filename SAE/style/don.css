@@ -1,5 +1,9 @@
-
 /*----------------page don------------------*/
+*{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
 #faire_don{
     background-color: var(--couleur_fond_rose);
     width: 30em;
@@ -44,9 +48,9 @@
 
 .titre{
     width:25%;
-    color: #E75462;
 }
 
+/*--------- Don par carte ---------*/
 #par_carte {
     margin-top: 5%;
 }
@@ -68,6 +72,7 @@
     margin: 0 2.5%;
 }
 
+/* Bouton de don */
 #bloc_img_btn{
     display:flex;
     justify-content: center;
@@ -85,7 +90,6 @@
     font-size: 18px;
 }
 
-
 #bloc_img_btn button:hover {
     background-color: #73d15c;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
@@ -93,17 +97,18 @@
     transition: .2s;
 }
 
-
 #bloc_img_btn img{
     margin-left: 3%;
     width: 150px;
 }
+/* FIN Bouton de don */
+/*--------- FIN Don par carte ---------*/
 
 
-
+/*--------- Don par cheque ---------*/
 #par_cheque{
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     background-color: var(--couleur_zone_texte_rose);
     margin-top: 80px;
     border-radius: 30px;
@@ -130,7 +135,10 @@
     margin-left: 30px;
     margin-top: 30px;
 }
+/*--------- FIN Don par cheque ---------*/
 
+
+/*--------- Don par virement ---------*/
 #par_virement {
     display: flex;
     justify-content: center;
@@ -157,6 +165,8 @@
     margin-right: 6%;
     margin-left: 4.5%;
 }
+/*--------- FIN Don par virement ---------*/
+
 
 #lien{
     color: deepskyblue;
@@ -182,6 +192,8 @@
 
     .titre{ /* "Comment faire un don" */
         width:50%;
+        margin-top: 20%;
+        margin-bottom: 10%;
     }
 
     /*----------- Bouton faire un don via Paypal et images des types de cb --------------*/
@@ -205,30 +217,42 @@
     }
     /*----------- FIN Bouton faire un don via Paypal et images des types de cb --------------*/
 
-    #par_cheque{
-        display: block;
+    /*---- Don par chèque ----*/
+    #par_cheque {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    #cheque_img{
+        order: 2;
+        text-align: center;
     }
 
     #cheque{
-
-        width: 250px;
+        order: 2;
+        width: 75%;
         height: auto
-
     }
-    #cheque_text {
-        margin-top : 40px;
-        margin-left: 40px;
-        margin-bottom: 20px;
-        line-height: 1.5;
+    /*---- FIN Don par chèque ----*/
+
+
+    /*---- Don par virement ----*/
+    #par_virement {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
     }
 
-    #cheque_text h3{
-        color: #4F2929;
-        font-style: italic;
-
+    #virement{
+        margin-top: 2%;
+        height: auto;
+        width: 50%;
     }
-    #cheque_text p{
-        margin-left: 30px;
-        margin-top: 30px;
+    /*---- FIN Don par virement ----*/
+
+    #coeur{
+        width: 10%;
+        height: auto;
     }
 }

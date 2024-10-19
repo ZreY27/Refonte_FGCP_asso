@@ -1,5 +1,8 @@
 /* ------------ DEBUT page accueil---------------*/
-
+*{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
 /* design du bouton */
 
 .titre-don{

@@ -1,20 +1,20 @@
-/* ------------ Page présentation ---------------*/
+/* --------------------------------------------- Page présentation -------------------------------------*/
 *{
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
-
+/*----------- Partie presentation -----------*/
 .wrapper{
     display: flex;
     justify-content :center;
     align-items: center;
     min-height: 50vh;
     flex-direction: column;
-
 }
 
 #logo1{
-    max-width : 17%;
+    width : 19%;
     float: left;
     margin-right: 2%;
 }
@@ -31,6 +31,7 @@
     text-align: justify;
     line-height: 1.6;
 }
+/*----------- FIN Partie presentation -----------*/
 
 
 /*------ Partie liste --------*/
@@ -38,7 +39,6 @@
 .liste, .bureau{
     padding: 1%;
     margin-top: 3%;
-
     border-radius: 30px;
     background-color: var(--couleur_zone_texte_rose);
     line-height: 45px;
@@ -66,14 +66,15 @@
 }
 
 #img_obj {
-    width: 10%;
-    height: 10%;
+    width: 80%;
+    height: auto;
     position: relative;
     bottom: -140px;
     right: 8%;
 }
 
 /*------ FIN Partie liste --------*/
+
 
 /*------------ Elections -------------*/
 .election{
@@ -134,6 +135,7 @@
 /*------------ FIN Elections -------------*/
 
 
+/*----------- Partie bureau -----------*/
 .compo {
     display: flex;
     justify-content: center;
@@ -156,9 +158,98 @@
     font-size: 14px;
     margin-bottom: 20%;
 }
-/* ------------ FIN page présentation---------------*/
+/*----------- FIN Partie bureau -----------*/
+/* ------------------------------- FIN page présentation-------------------------*/
+
 
 
 @media only screen and (max-width: 680px){
+    header{
+        margin-bottom: 10%;
+    }
 
+    .titre{
+        width: 50%;
+        padding: 2%;
+        margin-bottom: 10%;
+    }
+
+    /*----------- Partie presentation -----------*/
+    .text-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .text-box #logo1{
+        order: 2;
+        width: 35%;
+        transform: translateX(70%);
+        margin-bottom: 5%;
+    }
+    /*----------- FIN Partie presentation -----------*/
+
+
+    /*---- Partie objectifs -----*/
+    .objectifs{
+        display: block;
+    }
+
+    #div_img_obj{
+        text-align: right;
+    }
+
+    #img_obj{
+        width: 20%;
+        height: 20%;
+        position: static;
+        margin-right: 22%;
+        margin-bottom: 2%;
+    }
+    /*---- FIN Partie objectifs -----*/
+
+
+    /*----------- Partie election -----------*/
+    .thierry, .claire{
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .thierry_img{
+        order: 2;
+    }
+
+    #thierry_img{
+        position: relative;
+        width: 60%;
+        height: auto;
+        left: 55%;
+        transform: translateY(-25%);
+    }
+
+    .claire_img{
+        position: relative;
+        width: 25%;
+        height: auto;
+        left: 30%;
+        transform: translateY(-55%);
+    }
+
+    #claireDroit{
+        transform: translateX(1050%);
+    }
+    /*----------- FIN Partie election -----------*/
+
+
+    /*----------- Partie bureau -----------*/
+    .nom{
+        font-size: 14px;
+    }
+
+    .role{
+        font-size: 13px;
+    }
+    /*----------- FIN Partie bureau -----------*/
 }
