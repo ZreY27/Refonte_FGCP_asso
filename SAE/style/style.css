@@ -16,7 +16,6 @@ body > *:not(header, footer, main) { /*mettre un margin sur tous les fils du bod
     margin: 0 8%;
 }
 
-
 /* ------------ Barre de navigation ---------------*/
 header {
     position: sticky;

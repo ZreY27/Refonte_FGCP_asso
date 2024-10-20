@@ -36,6 +36,7 @@ menuButton.addEventListener('click', function() {
 });
 
 
+
 /*------------ Footer format PC petit écran : change comment est écrit l'adresse ---------*/
 // vérifie la taille de l'écran
 function verifierTailleEcran() {
