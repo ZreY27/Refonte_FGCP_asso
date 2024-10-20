@@ -47,7 +47,7 @@
 }
 
 .titre{
-    width:25%;
+    width:30%;
 }
 
 /*--------- Don par carte ---------*/
@@ -119,7 +119,14 @@
     width: 310px;
     height: 210px;
     margin-top: 5%;
+    margin-left: 5%;
 }
+
+#cheque_img{
+    display: flex;
+    align-items: center;
+}
+
 #cheque_text {
     margin: 40px 40px 20px;
     text-align: justify;
@@ -141,6 +148,7 @@
 /*--------- Don par virement ---------*/
 #par_virement {
     display: flex;
+    align-items: center;
     justify-content: center;
     padding-bottom: 50px;
     margin-top: 80px;
@@ -162,7 +170,7 @@
 }
 
 #virement{
-    margin-right: 6%;
+
     margin-left: 4.5%;
 }
 /*--------- FIN Don par virement ---------*/
@@ -188,11 +196,98 @@
 }
 
 
-@media only screen and (max-width: 680px){
+/*------------------------------- PC avec un petit écran --------------------------------------*/
+@media all and (min-width: 768px) and (max-width: 992px){
+    .titre{
+        width: 45%;
+    }
+    #virement{
+        width: auto;
+        height: 10%;
+    }
 
+    #coeur{
+        width: 8%;
+        height: auto;
+    }
+}
+
+/*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
+@media all and (min-width: 600px) and (max-width: 768px){
     .titre{ /* "Comment faire un don" */
         width:50%;
         margin-top: 20%;
+        margin-bottom: 10%;
+    }
+
+    /*----------- Bouton faire un don via Paypal et images des types de cb --------------*/
+    #bloc_img_btn{
+        width: 80%;
+        height: auto;
+        display:flex;
+        margin: auto;
+    }
+
+    #bloc_img_btn img{
+        margin-left: 3%;
+        width: auto;
+        height: 2%;
+    }
+
+    #bloc_img_btn button{
+        padding: 0 10px;
+        width: 150px;
+        font-size: 17px;
+    }
+    /*----------- FIN Bouton faire un don via Paypal et images des types de cb --------------*/
+
+    /*---- Don par chèque ----*/
+    #par_cheque {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    #cheque_img{
+        order: 2;
+        text-align: center;
+    }
+
+    #cheque{
+        order: 2;
+        width: 75%;
+        height: auto
+    }
+    /*---- FIN Don par chèque ----*/
+
+
+    /*---- Don par virement ----*/
+    #par_virement {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    #virement{
+        margin-top: 2%;
+        height: 50%;
+        width: auto;
+    }
+    /*---- FIN Don par virement ----*/
+
+    #coeur{
+        width: 10%;
+        height: auto;
+    }
+}
+
+
+
+
+/*--------------------------------- Version mobile -------------------------------------------------*/
+@media only screen and (max-width: 600px){
+    .titre{ /* "Comment faire un don" */
+        width:45%;
         margin-bottom: 10%;
     }
 
