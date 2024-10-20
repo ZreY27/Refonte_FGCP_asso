@@ -34,3 +34,25 @@ menuButton.addEventListener('click', function() {
         }, 500);
     }
 });
+
+
+
+/*------------ Footer format PC petit écran : change comment est écrit l'adresse ---------*/
+// vérifie la taille de l'écran
+function verifierTailleEcran() {
+    const mediaQuery = window.matchMedia("(min-width: 768px) and (max-width: 992px)");
+    const adr = document.getElementById("adresse");
+
+    if (mediaQuery.matches) {
+        // Si l'écran est entre 768px et 992px, on change l'adresse
+        adr.innerHTML = "<img src=\"img/footer/contact/adresse.png\" alt=\"Adresse\" class=\"image\">" +
+            "Fédération France Greffes<br>Cœur et/ou Poumons<br>36 rue Petit, 75019 PARIS";
+    }
+    else{ // Sinon on garde la même
+        adr.innerHTML = "<img src=\"img/footer/contact/adresse.png\" alt=\"Adresse\" class=\"image\">" +
+            "Fédération France Greffes Cœur<br>et/ou Poumons<br>36 rue Petit, 75019 PARIS";
+    }
+}
+
+// Quand on modifie la taille de l'écran, ça appelle la fonction
+window.addEventListener('resize', verifierTailleEcran);

@@ -69,8 +69,8 @@
     width: 80%;
     height: auto;
     position: relative;
-    bottom: -140px;
-    right: 8%;
+    bottom: -110px;
+    right: 10%;
 }
 
 /*------ FIN Partie liste --------*/
@@ -99,24 +99,24 @@
 /*Guillemets gauche et droit du texte de Thierry*/
 #thierryGauche{
     position: absolute;
-    transform: translateX(-10%);
+    transform: translateX(-150%);
     width: 2%;
 }
 #thierryDroit{
     position : absolute;
-    transform: translateX(3200%);
+    transform: translateX(100%);
     width: 2%;
 }
 
 /*Guillemets gauche et droit du texte de Claire*/
 #claireGauche{
     position: absolute;
-    transform: translateX(-10%);
+    transform: translateX(-150%);
     width: 2%;
 }
 #claireDroit{
     position : absolute;
-    transform: translateX(3050%);
+    transform: translateX(100%);
     width: 2%;
 }
 
@@ -163,7 +163,88 @@
 
 
 
-@media only screen and (max-width: 680px){
+/*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
+@media all and (min-width: 600px) and (max-width: 768px){
+    header{
+        margin-bottom: 10%;
+    }
+
+    .titre{
+        width: 50%;
+        padding: 2%;
+        margin-bottom: 5%;
+    }
+
+    /*----------- Partie presentation -----------*/
+    .text-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .text-box #logo1{
+        order: 2;
+        width: 30%;
+        transform: translateX(70%);
+        margin-bottom: 3%;
+    }
+    /*----------- FIN Partie presentation -----------*/
+
+
+    /*---- Partie objectifs -----*/
+    .objectifs{
+        display: block;
+    }
+
+    #div_img_obj{
+        text-align: right;
+    }
+
+    #img_obj{
+        width: 15%;
+        height: 15%;
+        position: static;
+        margin-right: 22%;
+        margin-bottom: 2%;
+    }
+    /*---- FIN Partie objectifs -----*/
+
+
+    /*----------- Partie election -----------*/
+    .thierry, .claire{
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .thierry_img{
+        order: 2;
+    }
+
+    #thierry_img{
+        position: relative;
+        width: 50%;
+        height: auto;
+        left: 65%;
+        transform: translateY(-45%);
+    }
+
+    .claire_img{
+        position: relative;
+        width: 20%;
+        height: auto;
+        left: 25%;
+        transform: translateY(-65%);
+    }
+    /*----------- FIN Partie election -----------*/
+}
+
+
+
+
+/*--------------------------------- Version mobile -------------------------------------------------*/
+@media only screen and (max-width: 600px){
     header{
         margin-bottom: 10%;
     }
@@ -186,7 +267,7 @@
         order: 2;
         width: 35%;
         transform: translateX(70%);
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
     /*----------- FIN Partie presentation -----------*/
 
@@ -223,22 +304,18 @@
 
     #thierry_img{
         position: relative;
-        width: 60%;
+        width: 50%;
         height: auto;
-        left: 55%;
-        transform: translateY(-25%);
+        left: 65%;
+        transform: translateY(-55%);
     }
 
     .claire_img{
         position: relative;
         width: 25%;
         height: auto;
-        left: 30%;
+        left: 25%;
         transform: translateY(-55%);
-    }
-
-    #claireDroit{
-        transform: translateX(1050%);
     }
     /*----------- FIN Partie election -----------*/
 

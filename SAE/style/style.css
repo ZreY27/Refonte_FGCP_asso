@@ -12,7 +12,7 @@
     --police_taille_nav : 16px;
 }
 
-body > *:not(header, footer) { /*mettre un margin sur tous les fils du body sauf le header et le footer*/
+body > *:not(header,main, footer) { /*mettre un margin sur tous les fils du body sauf le header et le footer*/
     margin: 0 8%;
 }
 
