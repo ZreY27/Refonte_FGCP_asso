@@ -1,3 +1,12 @@
+
+header {
+    margin: 0;
+}
+
+main {
+    position: relative;
+}
+
 section {
 
     position: relative;
@@ -47,7 +56,12 @@ section {
 
 }
 
-
+#navigALaUne {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 
@@ -58,12 +72,19 @@ section {
 
 
 footer {
-    margin: 0;
+    position: relative;
 }
 
 *{
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+}
+
+#filtres {
+    width : 468px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .filtre{
@@ -79,7 +100,7 @@ footer {
     opacity: .9;
 }
 
-.filtre:hover{
+.filtre:hover, .boutonALaUne:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: scale(1.01);
     transition: .2s;
