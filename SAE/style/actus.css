@@ -1,7 +1,11 @@
+/* Header */
 
 header {
     margin: 0;
 }
+
+
+/* Main */
 
 main {
     position: relative;
@@ -128,6 +132,8 @@ section {
     transform: translateX(-50%);
 }
 
+/* Footer */
+
 footer {
     position: relative;
 }
@@ -136,3 +142,4 @@ footer {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
+
