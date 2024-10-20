@@ -1,9 +1,79 @@
+
+header {
+
+
+}
+
+section {
+
+    position: relative;
+
+}
+
+#aLaUne {
+
+    background-color: palegoldenrod;
+
+
+    height: 500px;
+
+}
+
+#divALaUne {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.5);
+}
+
+#texteALaUne {
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+.boutonALaUne {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.5);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+#btnPrev {
+    top: 50%;
+
+}
+
+#btnNext {
+    top: 50%;
+    right: 0;
+
+}
+
+
+
+
+
+#navigActu {
+
+    background-color: papayawhip;
+}
+
+
+footer {
+    margin: 0;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
 
 .filtre{
+
     background-color: var(--couleur_don);
     color: white;
     border: none;
@@ -21,3 +91,4 @@
     transition: .2s;
     opacity: 1.3;
 }
+
