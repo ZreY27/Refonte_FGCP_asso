@@ -126,7 +126,7 @@ section {
 }
 
 #navigPages {
-    margin-top: 10px;
+    top: 94%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
