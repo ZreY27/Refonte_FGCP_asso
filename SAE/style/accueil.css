@@ -38,7 +38,6 @@
 }
 
 /*fin de design du bouton*/
-
 .zoneText{
     padding: 20px;
     background-color: var(--couleur_zone_texte_rose);
@@ -105,7 +104,43 @@
 
 /*fin design ruban vert*/
 
-@media only screen and (max-width: 680px){
+/*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
+@media all and (min-width: 600px) and (max-width: 768px){
+    /*-------- "Pourquoi donner" --------*/
+    .zoneText{
+        padding: 10px;
+    }
+
+    .aligner{
+        display:block;
+    }
+
+    .AlignText{
+        display: block;
+        width: 95%;
+    }
+
+    .AlignText p{
+        text-align: justify;
+    }
+    /*-------- FIN "Pourquoi donner" --------*/
+
+    /*------ Image du ruban vert -------*/
+    .ruban img{
+        width: 15%;
+        height: auto;
+    }
+    /*------ FIN Image du ruban vert -------*/
+
+    .ruban{
+        padding: 2%;
+    }
+}
+
+
+
+/*------------------------------- Petit écran (mobile) --------------------------------------*/
+@media only screen and (max-width: 600px){
     /*-------- "Pourquoi donner" --------*/
     .zoneText{
         padding: 10px;
