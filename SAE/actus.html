@@ -86,7 +86,7 @@
 
         </section>
 
-        <section id="navigActu">
+        <div id="navigActu">
 
             <div id="filtres">
                 <button type="button" class="filtre" onclick=""> Tout </button>
@@ -96,102 +96,26 @@
                 <button type="button" class="filtre" onclick=""> Formation </button>
             </div>
 
-            <template>
-                <div class = "actus">
-                    <div class="imageActus">
-
-                    </div>
-                    <div class="titreActus">
-                        <p>
-                            Blablablablabla
-                        </p>
-                    </div>
+            <!-- template des articles -->
+            <template id="article_vide">
+                <div class ="actus">
+                    <img class="imageActus">
+                    <p class="titreActus"></p>
                 </div>
             </template>
 
-            <div class = "actus">
-                <div class="imageActus">
+            <section id="listeArticles">
+                <!-- les articles apparaissent iici-->
+            </section>
 
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
-
-            <div class = "actus">
-                <div class="imageActus">
-
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
-
-            <div class = "actus">
-                <div class="imageActus">
-
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
-
-            <div class = "actus">
-                <div class="imageActus">
-
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
-
-            <div class = "actus">
-                <div class="imageActus">
-
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
-
-            <div class = "actus">
-                <div class="imageActus">
-
-                </div>
-                <div class="titreActus">
-                    <p>
-                        Blablablablabla
-                    </p>
-                </div>
-            </div>
 
             <div id="navigPages">
-
-                <button type="button" id="arrowLeft">
-                    <<
-                </button>
-
-                <button type="button" id="currentPage">
-                    1
-                </button>
-
-                <button type="button" id="arrowRight">
-                    >>
-                </button>
-
+                <button type="button" id="arrowLeft"> << </button>
+                <button type="button" id="currentPage"> 1 </button>
+                <button type="button" id="arrowRight"> >> </button>
             </div>
 
-        </section>
+        </div>
     </main>
 
 

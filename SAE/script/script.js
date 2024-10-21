@@ -18,6 +18,7 @@ backToTopButton.addEventListener('click', function(e) {
 
 /** --------------Page Actus -----------*/
 
+
 const articles = [
     {
         id : 1,
@@ -128,7 +129,7 @@ function actus(){
 }
 
 function nouveau(){
-    const nouveau = articles.filter(article => article.date = ???????????);
+    //const nouveau = articles.filter(article => article.date = ???????????);
     // affichage
 }
 
@@ -145,6 +146,25 @@ function tout(){
     // affichage
 }
 
+// ajoute les articles à la page
+const newArticle = document.querySelector('#article_vide');
+const clone = document.importNode(newArticle.content,true);
+
+const newArticleTemplate = document.querySelector('#article_vide');
+const articleContainer = document.querySelector('#listeArticles');
+articles.forEach(article => {
+    const clone = document.importNode(newArticleTemplate.content, true);
+
+    const image = clone.querySelector('.imageActus');
+    image.src = article.image;
+    image.alt = article.titre;
+
+    const titre = clone.querySelector('.titreActus');
+    titre.textContent = article.titre;
+
+    // Ajouter le clone dans le conteneur
+    articleContainer.appendChild(clone);
+});
 
 
 /*------------ Menu format mobile : apparaît et disparaît quand on clique sur l'image menu ---------*/
