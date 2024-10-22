@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/actus.css">
 
-        <script language="JavaScript" src="script/script.js" type="module"></script>
+        <script language="JavaScript" src="script/script.js" defer></script>
         <title>Actualités</title>
     </head>
 
@@ -89,18 +89,21 @@
         <div id="navigActu">
 
             <div id="filtres">
-                <button type="button" class="filtre" onclick=""> Tout </button>
-                <button type="button" class="filtre" onclick=""> Nouveau </button>
-                <button type="button" class="filtre" onclick=""> Rapport </button>
-                <button type="button" class="filtre" onclick=""> Actus </button>
-                <button type="button" class="filtre" onclick=""> Formation </button>
+                <button type="button" class="filtre" onclick="afficherArticles('all')">Tout</button>
+                <button type="button" class="filtre" onclick="afficherArticles('nouveau')">Nouveau</button>
+                <button type="button" class="filtre" onclick="afficherArticles('rapport')">Rapport</button>
+                <button type="button" class="filtre" onclick="afficherArticles('actus')">Actus</button>
+                <button type="button" class="filtre" onclick="afficherArticles('formation')">Formation</button>
             </div>
 
             <!-- template des articles -->
             <template id="article_vide">
                 <div class ="actus">
                     <img class="imageActus">
-                    <p class="titreActus"></p>
+                    <div>
+                        <a class="lienActus"> <p class="titreActus"></p> </a>
+                        <p class="dateActus"></p>
+                    </div>
                 </div>
             </template>
 
@@ -110,9 +113,9 @@
 
 
             <div id="navigPages">
-                <button type="button" id="arrowLeft"> << </button>
+                <button type="button" id="arrowLeft" onclick="changerPage('prev')"> << </button>
                 <button type="button" id="currentPage"> 1 </button>
-                <button type="button" id="arrowRight"> >> </button>
+                <button type="button" id="arrowRight" onclick="changerPage('next')"> >> </button>
             </div>
 
         </div>

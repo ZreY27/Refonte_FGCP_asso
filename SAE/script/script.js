@@ -86,7 +86,7 @@ const articles = [
     },
     {
         id : 9,
-        titre : "DON D’ORGANES ET DE TISSUS, UN LIEN QUI NOUS UNIT TOUS. UNE JOURNÉE POUR INVITER À LA RÉFLEXION SUR LE DON D’ORGANES ET DE TISSUS 22 JUIN 2021",
+        titre : "DON D’ORGANES ET DE TISSUS, UN LIEN QUI NOUS UNIT TOUS.",
         lien: "http://www.france-coeur-poumon.asso.fr/news/2021/00060_2021_06_22_don_dorganes.php" ,
         date: "22/06/2021",
         type : "actus",
@@ -119,52 +119,96 @@ const articles = [
 
 ]
 
-function listeArt(type){
-    return  articles.filter(article => article.type = type);
-}
-
-function actus(){
-    const actus = listeArt("actus");
-    // affichage
-}
-
-function nouveau(){
-    //const nouveau = articles.filter(article => article.date = ???????????);
-    // affichage
-}
-
-function rapport(){
-    const rapport = listeArt("rapport");
-    // affichage
-}
-
-function formation(){
-    const formation = listeArt("formation");
-    // affichage
-}
-function tout(){
-    // affichage
-}
-
-// ajoute les articles à la page
-const newArticle = document.querySelector('#article_vide');
-const clone = document.importNode(newArticle.content,true);
-
 const newArticleTemplate = document.querySelector('#article_vide');
 const articleContainer = document.querySelector('#listeArticles');
-articles.forEach(article => {
-    const clone = document.importNode(newArticleTemplate.content, true);
+const currentPageButton = document.querySelector('#currentPage');
 
-    const image = clone.querySelector('.imageActus');
-    image.src = article.image;
-    image.alt = article.titre;
+const articlesParPage = 6; // Nombre d'articles max par page
+let currentPage = 1;
+let articlesFiltres = articles;
 
-    const titre = clone.querySelector('.titreActus');
-    titre.textContent = article.titre;
+// Fonction pour afficher les articles en fonction du filtre et de la page actuelle
+function afficherArticles(filtre = 'all') {
+    // Filtrer les articles : soit tous, soit par un filtre
+    articlesFiltres = articles.filter(article => {
+        return filtre === 'all' || article.type === filtre;
+    });
 
-    // Ajouter le clone dans le conteneur
-    articleContainer.appendChild(clone);
-});
+    // Réinitialiser la page courante à 1 lors d'un nouveau filtre
+    currentPage = 1;
+    afficherPage(currentPage);
+}
+
+// Fonction pour afficher une page donnée
+function afficherPage(page) {
+    // Calculer l'index de début et de fin pour afficher les articles
+    const startIndex = (page - 1) * articlesParPage;
+    const endIndex = startIndex + articlesParPage;
+
+    // Vider le conteneur d'articles avant d'afficher les nouveaux
+    articleContainer.innerHTML = '';
+
+    // Obtenir les articles à afficher pour cette page
+    const articlesPage = articlesFiltres.slice(startIndex, endIndex);
+
+    // Afficher les articles de la page courante
+    articlesPage.forEach(article => {
+        const clone = document.importNode(newArticleTemplate.content, true);
+
+        const image = clone.querySelector('.imageActus');
+        const titre = clone.querySelector('.titreActus');
+        const date = clone.querySelector('.dateActus');
+        const lien = clone.querySelector('.lienActus');
+        image.src = article.image;
+        image.alt = article.titre;
+        titre.textContent = article.titre;
+        date.textContent = article.date;
+        lien.href = article.lien;
+
+        articleContainer.appendChild(clone);
+    });
+
+    // Mettre à jour le numéro de la page actuelle
+    currentPageButton.textContent = currentPage;
+
+    // Gérer l'affichage des boutons de navigation
+    gererNavigation();
+}
+
+// Fonction pour changer de page
+function changerPage(direction) {
+    if (direction === 'next' && currentPage * articlesParPage < articlesFiltres.length) {
+        currentPage++;
+    } else if (direction === 'prev' && currentPage > 1) {
+        currentPage--;
+    }
+    afficherPage(currentPage);
+}
+
+// Fonction pour gérer l'état des boutons de navigation
+function gererNavigation() {
+    const arrowLeft = document.querySelector('#arrowLeft');
+    const arrowRight = document.querySelector('#arrowRight');
+
+    // Désactiver le bouton "Précédent" si on est sur la première page
+    if (currentPage === 1) {
+        arrowLeft.disabled = true;
+    } else {
+        arrowLeft.disabled = false;
+    }
+
+    // Désactiver le bouton "Suivant" si on est sur la dernière page
+    if (currentPage * articlesParPage >= articlesFiltres.length) {
+        arrowRight.disabled = true;
+    } else {
+        arrowRight.disabled = false;
+    }
+}
+
+// Afficher tous les articles par défaut quand la page est chargée
+window.onload = function() {
+    afficherArticles('all');
+};
 
 
 /*------------ Menu format mobile : apparaît et disparaît quand on clique sur l'image menu ---------*/

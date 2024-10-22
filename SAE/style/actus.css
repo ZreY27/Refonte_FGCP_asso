@@ -12,18 +12,12 @@ main {
 }
 
 section {
-
     position: relative;
-
 }
 
 #aLaUne {
-
-    background-color: palegoldenrod;
-
-
-    height: 500px;
-
+    background-color: red;
+    height: 300px;
 }
 
 #divALaUne {
@@ -38,7 +32,6 @@ section {
     margin: 0;
     padding-top: 15px;
     text-align: center;
-
 }
 
 .boutonALaUne {
@@ -68,9 +61,8 @@ section {
 }
 
 #navigActu {
-
     background-color: papayawhip;
-    height: 480px ;
+    height: 800px ;
 
 }
 
@@ -108,14 +100,14 @@ section {
 #listeArticles {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* espace entre les articles */
+    gap: 10px; /* espace entre les articles */
 }
 
 .actus {
     display: flex;
-    margin: 5px 10%;
+    margin: 0 10%;
     background-color: white;
-    height: 7em;
+    height: 6em;
 }
 
 .imageActus {
@@ -125,10 +117,12 @@ section {
 }
 
 .titreActus {
-    width: auto;
     margin-left: 2em;
     font-weight: bold;
-    margin-top: 2em;
+}
+
+.dateActus{
+    margin-left: 2em;
 }
 
 #navigPages {
