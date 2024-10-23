@@ -20,6 +20,23 @@ section {
     height: 300px;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+.actusALaUne {
+
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    flex-shrink: 0;
+
+}
+
 #divALaUne {
     position: absolute;
     height: 50px;
@@ -44,7 +61,7 @@ section {
 
 #btnPrev {
     top: 50%;
-
+    left: 0;
 }
 
 #btnNext {
