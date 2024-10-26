@@ -41,29 +41,28 @@
     </header>
 
     <main>
-
         <section id="aLaUne">
-
             <div id = "container">
-
-                <div id = "actus1" class = "actusALaUne">
+                <div id="carroussel">
+                    <div id = "actus1" class = "actusALaUne"></div>
+                    <div id = "actus2" class = "actusALaUne"></div>
+                    <div id = "actus3" class = "actusALaUne"></div>
+                    <div id = "actus4" class = "actusALaUne"></div>
+                    <div id = "actus5" class = "actusALaUne"></div>
+                    <div id = "actus6" class = "actusALaUne"></div>
                 </div>
 
-                <div id = "actus2" class = "actusALaUne">
-                </div>
+                <button type="button" id="btnPrev" class = "boutonALaUne" onclick=""> < </button>
+                <button type="button" id="btnNext" class = "boutonALaUne" onclick=""> > </button>
 
-                <div id = "actus3" class = "actusALaUne">
+                <div id = "navigALaUne">
+                    <button class = "pointNavig"> . </button>
+                    <button class = "pointNavig"> . </button>
+                    <button class = "pointNavig"> . </button>
+                    <button class = "pointNavig"> . </button>
+                    <button class = "pointNavig"> . </button>
+                    <button class = "pointNavig"> . </button>
                 </div>
-
-                <div id = "actus4" class = "actusALaUne">
-                </div>
-
-                <div id = "actus5" class = "actusALaUne">
-                </div>
-
-                <div id = "actus6" class = "actusALaUne">
-                </div>
-
             </div>
 
             <div id = "divALaUne">
@@ -71,76 +70,42 @@
                     À LA UNE
                 </h3>
             </div>
-
-            <button type="button" id="btnPrev" class = "boutonALaUne" onclick="">
-                <
-            </button>
-
-            <button type="button" id="btnNext" class = "boutonALaUne" onclick="">
-                >
-            </button>
-
-            <div id = "navigALaUne">
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-                <button class = "pointNavig">
-                    .
-                </button>
-
-            </div>
-
         </section>
 
         <div id="navigActu">
-
-            <div id="filtres">
-                <button type="button" class="filtre" onclick="afficherArticles('all')">Tout</button>
-                <button type="button" class="filtre" onclick="afficherArticles('rapport')">Rapport</button>
-                <button type="button" class="filtre" onclick="afficherArticles('actus')">Actus</button>
-                <button type="button" class="filtre" onclick="afficherArticles('formation')">Formation</button>
-            </div>
-
-            <!-- template des articles -->
-            <template id="article_vide">
-                <div class ="actus">
-                    <img class="imageActus">
-                    <div>
-                        <a class="lienActus"> <p class="titreActus"></p> </a>
-                        <p class="dateActus"></p>
-                    </div>
+            <div id="topNavigActu">
+                <div id="filtres">
+                    <button type="button" class="filtre" onclick="afficherArticles('all')">Tout</button>
+                    <button type="button" class="filtre" onclick="afficherArticles('rapport')">Rapport</button>
+                    <button type="button" class="filtre" onclick="afficherArticles('actus')">Actus</button>
+                    <button type="button" class="filtre" onclick="afficherArticles('formation')">Formation</button>
                 </div>
-            </template>
-
-            <section id="listeArticles">
-                <!-- les articles apparaissent ici-->
-            </section>
-
-
-            <div id="navigPages">
-                <button type="button" id="arrowLeft" onclick="changerPage('prev')"> << </button>
-                <button type="button" id="currentPage"> 1 </button>
-                <button type="button" id="arrowRight" onclick="changerPage('next')"> >> </button>
             </div>
 
+            <div id="midNavigActu">
+                <!-- template des articles -->
+                <template id="article_vide">
+                    <div class ="actus">
+                        <img class="imageActus" alt="">
+                        <div>
+                            <a class="lienActus"> <p class="titreActus"></p> </a>
+                            <p class="dateActus"></p>
+                        </div>
+                    </div>
+                </template>
+
+                <section id="listeArticles">
+                    <!-- les articles apparaissent ici-->
+                </section>
+            </div>
+
+            <div id="bottomNavigActu">
+                <div id="navigPages">
+                    <button type="button" id="arrowLeft" onclick="changerPage('prev')"> << </button>
+                    <button type="button" id="currentPage"> 1 </button>
+                    <button type="button" id="arrowRight" onclick="changerPage('next')"> >> </button>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -174,7 +139,7 @@
                 <div class="contact">
                     <h3>Contact</h3>
                     <div class="contactAll">
-                        <div class="conctact1">
+                        <div class="contact1">
                             <p id="adresse"><img src="img/footer/contact/adresse.png" alt="Adresse" class="image">
                                 Fédération France Greffes Cœur<br>et/ou Poumons<br>36 rue Petit, 75019 PARIS</p>
                             <p id="telephone"><img src="img/footer/contact/phone.png" alt="Numéro de téléphone" class="image">06 60 72 70 14</p>

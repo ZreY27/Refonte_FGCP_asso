@@ -164,7 +164,7 @@
 
 
 /*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
-@media all and (min-width: 600px) and (max-width: 768px){
+@media all and (min-width: 600px) and (max-width: 800px){
     header{
         margin-bottom: 10%;
     }

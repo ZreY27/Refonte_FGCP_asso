@@ -214,7 +214,7 @@
 }
 
 /*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
-@media all and (min-width: 600px) and (max-width: 768px){
+@media all and (min-width: 600px) and (max-width: 800px){
     .titre{ /* "Comment faire un don" */
         width:50%;
         margin-top: 20%;

@@ -105,7 +105,7 @@
 /*fin design ruban vert*/
 
 /*------------------------------- Ecran de taille moyenne (tablette) --------------------------------------*/
-@media all and (min-width: 600px) and (max-width: 768px){
+@media all and (min-width: 600px) and (max-width: 800px){
     /*-------- "Pourquoi donner" --------*/
     .zoneText{
         padding: 10px;
