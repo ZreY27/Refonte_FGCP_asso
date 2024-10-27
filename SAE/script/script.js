@@ -211,6 +211,29 @@ window.onload = function() {
 };
 
 
+// Met en surbrillance les boutons filtres
+const filtresDiv = document.querySelector('#filtres');
+const buttons = document.querySelectorAll('#filtres button');
+
+function btnClique(bouton) { // Fonction pour mettre en surbrillance le filtre sélectionné
+    buttons.forEach(button => {
+        if (button === bouton) {
+            button.style.backgroundColor = '#f44336';
+            button.style.color = 'white';
+        } else {
+            button.style.backgroundColor = 'white';
+            button.style.color = 'black';
+        }
+    });
+}
+
+// Récupère le bouton sur lequel a cliqué l'utilisateur et appelle la fonction pour changer de couleur
+filtresDiv.addEventListener('click', (event) => {
+    const boutonActif = event.target;
+    btnClique(boutonActif);
+});
+
+
 /*------------ Menu format mobile : apparaît et disparaît quand on clique sur l'image menu ---------*/
 const nav = document.querySelector('#navVersionMobile');
 const menuButton = document.getElementById('menuMobile');
@@ -219,9 +242,9 @@ menuButton.addEventListener('click', function() {
     if (nav.style.display === 'none' || nav.style.display === '') {
         nav.style.display = 'block';
         setTimeout(() => {
-            nav.style.maxHeight = '200px';
-        }, 0);
-    } else {
+            nav.style.maxHeight = '200px';        }, 0);
+    }
+    else {
         nav.style.maxHeight = '0'; // Ferme le menu
         setTimeout(() => {
             nav.style.display = 'none';
