@@ -24,18 +24,28 @@ section {
 }
 
 #container {
+    position: absolute;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     height: 300px;
     width: 100%;
+
+}
+
+#carroussel {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .actusALaUne {
+
     height: 300px;
     width: 100%;
     margin: 0;
     flex-shrink: 0;
+    z-index: -5;
 }
 
 #divALaUne {

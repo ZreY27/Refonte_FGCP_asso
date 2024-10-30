@@ -273,3 +273,11 @@ function verifierTailleEcran() {
 
 // Quand on modifie la taille de l'écran, ça appelle la fonction
 window.addEventListener('resize', verifierTailleEcran);
+
+// Charge les actus dans le caroussel des articles à la une
+let articlesTri = articles.sort((a, b) => {
+    const dateA = new Date(a.date.split("/").reverse().join("-"));
+    const dateB = new Date(b.date.split("/").reverse().join("-"));
+    return dateB - dateA;
+});
+

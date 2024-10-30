@@ -11,3 +11,4 @@ function changeSlide(direction) {
 
 document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
 document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
