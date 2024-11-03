@@ -152,11 +152,13 @@ section {
 }
 
 .actus {
+
     display: flex;
     margin: 0 10%;
     background-color: var(--couleur_zone_texte_rose);
     height: 6em;
     transition-duration: 0.4s;
+
 }
 
 .actus:hover{
