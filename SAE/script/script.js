@@ -280,4 +280,22 @@ let articlesTri = articles.sort((a, b) => {
     const dateB = new Date(b.date.split("/").reverse().join("-"));
     return dateB - dateA;
 });
+// Sélectionne toutes les divs avec la classe "actusALaUne"
+const actusDivs = document.querySelectorAll(".actusALaUne");
 
+// Boucle pour assigner une image de fond et un événement onclick à chaque div
+actusDivs.forEach((div, index) => {
+    if (articlesTri[index]) { // Vérifie qu'il y a bien un article pour cet index
+        div.style.backgroundImage = `url(${articlesTri[index].image})`; // Assigne l'image de fond
+        div.onclick = () => {
+            window.location.href = articlesTri[index].lien; // Redirige vers le lien quand on clique
+        };
+    }
+});
+
+/**
+const HUHU = document.querySelector(".actusALaUne")
+
+HUHU.style.backgroundImage = `url(${articlesTri[0].image})`;
+console.log(articlesTri)
+**/

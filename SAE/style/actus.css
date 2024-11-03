@@ -16,6 +16,7 @@ main {
 
 section {
     position: relative;
+    z-index: -100;
 }
 
 #aLaUne {
@@ -24,31 +25,39 @@ section {
 }
 
 #container {
+    z-index: -40;
     position: absolute;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     height: 300px;
     width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+
 
 }
 
 #carroussel {
+    z-index: -30;
     display: flex;
     width: 100%;
     height: 100%;
+
 }
 
 .actusALaUne {
 
+    background-size: cover;
     height: 300px;
     width: 100%;
     margin: 0;
     flex-shrink: 0;
-    z-index: -5;
+    z-index: -20;
 }
 
 #divALaUne {
+    z-index: -10;
     position: absolute;
     height: 50px;
     width: 200px;
@@ -57,22 +66,28 @@ section {
 }
 
 #texteALaUne {
+    z-index: -10;
     margin: 0;
     padding-top: 15px;
     text-align: center;
 }
 
-#container{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
+
 .boutonALaUne {
+
+    z-index: 0;
+    background-color: lightpink;
+    color: black;
     border: none;
     height: 50px;
     width: 50px;
     position: absolute;
     cursor: pointer;
+}
+
+.boutonALaUne:hover  {
+    background-color: darkred;
+    color: white;
 }
 
 #btnPrev {
