@@ -274,6 +274,8 @@ function verifierTailleEcran() {
 // Quand on modifie la taille de l'écran, ça appelle la fonction
 window.addEventListener('resize', verifierTailleEcran);
 
+
+
 // Charge les actus dans le caroussel des articles à la une
 let articlesTri = articles.sort((a, b) => {
     const dateA = new Date(a.date.split("/").reverse().join("-"));
@@ -292,6 +294,39 @@ actusDivs.forEach((div, index) => {
         };
     }
 });
+
+// Variables globales pour suivre la position actuelle dans le carrousel
+let currentIndex = 0;
+const container = document.getElementById('container');
+
+// Fonction de défilement pour le carrousel
+function scrollCarousel(direction) {
+    // Récupère dynamiquement la largeur de `#container`
+    const containerWidth = container.offsetWidth;
+
+    // Met à jour l'index en fonction de la direction
+    currentIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+    // Limite l'index pour éviter de dépasser les limites
+    const maxIndex = container.children.length - 1;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    // Calcule et effectue le défilement
+    const scrollPosition = currentIndex * containerWidth;
+    container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+}
+
+// Écoute l'événement de redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    // Récupère la nouvelle largeur de `#container`
+    const containerWidth = container.offsetWidth;
+
+    // Recalcule la position de défilement en fonction de l'index actuel
+    const scrollPosition = currentIndex * containerWidth;
+    container.scrollTo({ left: scrollPosition });
+});
+
 
 /**
 const HUHU = document.querySelector(".actusALaUne")

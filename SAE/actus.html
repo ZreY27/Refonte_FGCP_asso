@@ -41,25 +41,29 @@
     </header>
 
     <main>
-        <section id="aLaUne">
+        <section id="carroussel">
             <div id = "divALaUne">
                 <h3 id = "texteALaUne">
                     À LA UNE
                 </h3>
             </div>
             <div id = "container">
-                <div id="carroussel">
-                    <div id = "actus1" class = "actusALaUne"></div>
-                    <div id = "actus2" class = "actusALaUne"></div>
-                    <div id = "actus3" class = "actusALaUne"></div>
-                    <div id = "actus4" class = "actusALaUne"></div>
-                    <div id = "actus5" class = "actusALaUne"></div>
-                    <div id = "actus6" class = "actusALaUne"></div>
+                <div id = "actus1" class = "actusALaUne">
+                    <div id="titreActusALaUne">
+                        <a class="lienActus"> <p class="titreActusALaUne"></p> </a>
+                        <p class="dateActusALaUne"></p>
+                    </div>
                 </div>
-
-                <button type="button" id="btnPrev" class="boutonALaUne" onclick=""> < </button>
-                <button type="button" id="btnNext" class="boutonALaUne" onclick=""> > </button>
+                <div id = "actus2" class = "actusALaUne"></div>
+                <div id = "actus3" class = "actusALaUne"></div>
+                <div id = "actus4" class = "actusALaUne"></div>
+                <div id = "actus5" class = "actusALaUne"></div>
+                <div id = "actus6" class = "actusALaUne"></div>
             </div>
+
+            <button type="button" id="btnPrev" class="boutonALaUne" onclick="scrollCarousel('prev')"> < </button>
+            <button type="button" id="btnNext" class="boutonALaUne" onclick="scrollCarousel('next')"> > </button>
+
         </section>
 
         <div id="navigActu">
