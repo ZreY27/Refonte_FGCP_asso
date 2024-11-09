@@ -328,6 +328,7 @@ window.addEventListener('resize', () => {
 });
 
 
+
 /**
 const HUHU = document.querySelector(".actusALaUne")
 
