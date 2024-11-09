@@ -29,6 +29,15 @@ function afficherArticles(filtre = 'all') {
     afficherPage(currentPage);
 }
 
+// Ajoute un écouteur d'événements pour le bouton "Tout"
+document.getElementById('filtreTout').addEventListener('click', () => afficherArticles('all'));
+// Ajoute un écouteur d'événements pour le bouton "Rapport"
+document.getElementById('filtreRapport').addEventListener('click', () => afficherArticles('rapport'));
+// Ajoute un écouteur d'événements pour le bouton "Actus"
+document.getElementById('filtreActu').addEventListener('click', () => afficherArticles('actus'));
+// Ajoute un écouteur d'événements pour le bouton "Formation"
+document.getElementById('filtreForma').addEventListener('click', () => afficherArticles('formation'));
+
 /**
  * Affiche une page donnée
  * @param page
@@ -80,6 +89,11 @@ function changerPage(direction) {
     }
     afficherPage(currentPage);
 }
+
+// Ajoute un écouteur d'événements pour le bouton "arrowLeft"
+document.getElementById('arrowLeft').addEventListener('click', () => changerPage('prev'));
+// Ajoute un écouteur d'événements pour le bouton "arrowRight"
+document.getElementById('arrowRight').addEventListener('click', () => changerPage('next'));
 
 
 /**
@@ -230,6 +244,7 @@ document.getElementById('btnPrev').addEventListener('click', () => scrollCarouse
 
 // Ajoute un écouteur d'événements pour le bouton "Suivant"
 document.getElementById('btnNext').addEventListener('click', () => scrollCarousel('next'));
+
 
 // Écoute l'événement de redimensionnement de la fenêtre
 window.addEventListener('resize', () => {
