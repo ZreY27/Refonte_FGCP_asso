@@ -5,7 +5,6 @@
 
 /* Header */
 header {
-    z-index: 20;
     margin: 0;
 }
 
@@ -16,11 +15,13 @@ main {
 }
 
 section {
-    height: 100vh;
     position: relative;
     width: 100%;
 }
 
+#carroussel{
+    height: 100vh;
+}
 
 #container {
     position: relative;
@@ -68,6 +69,8 @@ section {
 
 
 .boutonALaUne {
+    background-color: lightpink;
+    color: black;
     border: none;
     height: 50px;
     width: 50px;
@@ -142,11 +145,13 @@ section {
 }
 
 .actus {
+
     display: flex;
     margin: 0 10%;
     background-color: var(--couleur_zone_texte_rose);
     height: 6em;
     transition-duration: 0.4s;
+
 }
 
 .actus:hover{
@@ -168,7 +173,7 @@ section {
 }
 
 .titreActus {
-    margin: 1em 0 0 2em;
+    margin: 0 0 0 2em;
     font-weight: bold;
 }
 
