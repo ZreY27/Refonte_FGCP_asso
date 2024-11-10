@@ -15,13 +15,10 @@ main {
     position: relative;
 }
 
-section {
+#carroussel{
+    height: 40vh;
     position: relative;
     width: 100%;
-}
-
-#carroussel{
-    height: 100vh;
 }
 
 #container {
@@ -31,7 +28,7 @@ section {
     overflow: hidden;
     height: inherit;
     width: 100%;
-
+    cursor: pointer;
 }
 
 .actusALaUne {
@@ -174,7 +171,7 @@ section {
 }
 
 .titreActus {
-    margin: 0 0 0 2em;
+    margin: 1em 0 0 2em;
     font-weight: bold;
 }
 

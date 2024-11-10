@@ -1,11 +1,7 @@
 import {article} from './articles.js'
+const articles = JSON.parse(JSON.stringify(article));
 
 /** --------------Page Actus -----------*/
-
-console.log(article)
-const articles = JSON.parse(JSON.stringify(article));
-console.log(articles)
-
 const newArticleTemplate = document.querySelector('#article_vide');
 const articleContainer = document.querySelector('#listeArticles');
 const currentPageButton = document.querySelector('#currentPage');
