@@ -1,0 +1,26 @@
+#entete-enquete{
+    margin-bottom: 20%;
+    text-align:center;
+    background-color: #FFE6E6;
+    color: #E75462;
+    border-radius: 20%;
+    padding: 2% 0 2% 0;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 5%;
+}
+
+#entete-texte {
+    text-align: center;
+}
+
+.options{
+
+    background-color: #FFE6E6;
+    padding: 5% 10% 5% 10%;
+    border-radius: 10%;
+    width: 20%;
+    height: 10%;
+}
+
+
