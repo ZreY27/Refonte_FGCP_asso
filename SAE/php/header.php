@@ -5,7 +5,7 @@
             <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
             <nav>
                 <ul type="none">
-                    <li><a href="accueil.php" title="Accueil"><b>Accueil</b></a></li>
+                    <li><a href="acceuil.php" title="Accueil"><b>Accueil</b></a></li>
                     <li><a href="presentation.php" title="Présentation de la FGCP">Qui sommes-nous</a></li>
                     <li><a href="actus.php" title="Voir la page d'actualité">Actus</a></li>
                     <li class="don"><a href="don.php" title="Faire un don">Faire un don</a></li>
@@ -19,7 +19,7 @@
         <div>
             <nav id="navVersionMobile">
                 <ul type="none" id="menuVersionMobile">
-                    <li><a href="accueil.php" title="Accueil"><b>Accueil</b></a></li>
+                    <li><a href="acceuil.php" title="Accueil"><b>Accueil</b></a></li>
                     <li><a href="presentation.php" title="Présentation de la FGCP">Qui sommes-nous</a></li>
                     <li><a href="actus.php" title="Voir la page d'actualité">Actualités</a></li>
                 </ul>

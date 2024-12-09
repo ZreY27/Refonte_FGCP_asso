@@ -1,99 +1,82 @@
-#connexion_form {
-    padding: 20px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: solid 1px;
-    border-radius: 10px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f1f4;
 }
 
-#connexion_form div{
-    margin: 15px 0;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#connexion_form input[type=submit] {
-    min-width: 65px;
-}
-
-form h2 {
-    font-size: 25px;
+.form-header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.separation {
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 1.5px;
-    margin: 10px 0 30px 0;
-}
-
-.champs input {
-    height: 60px;
-    width: 100%;
-    border: solid 1.5px;
-    border-radius: .5rem;
-    font-size: .9em;
-}
-
-.champs {
-    margin: 20px 0;
+.toggle-buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-input:focus, textarea:focus, select:focus { /* focus en bleu */
-    outline: solid 3px rgba(102, 178, 255, 0.8);
-    outline-offset: 1.5px;
-}
-
-.label_text {
-    position: absolute;
-    margin: 5px 0 0 13px;
-    font-size: .7em;
-    color: grey;
-    cursor: text;
-}
-
-input:hover, textarea:hover {
-    background-color: #F6FAFB;
-}
-
-input[type=submit] {
-    width: 30%;
-    height: 40px;
-    font-size: 1rem;
-    padding: 5px;
-    margin-top: 20px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    border: none;
-    border-radius: .5rem;
-    background-color: rgb(70, 158, 247);
+.toggle-btn {
+    padding: 15px 40px;
+    background-color: #ffb5d0;
     color: white;
-    transition: .3s;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-input[type=submit]:hover {
-    background-color: rgb(40, 138, 236);
+.toggle-btn:hover {
+    background-color: #e75480;
 }
 
-input[type=text]:not(.input_icone, .input_mdp) {
-    padding: .8em 12px 0 12px;
+.form-group {
+    margin-bottom: 25px;
 }
 
-.input_icone {
-    padding: .8em 12px 0 35px;
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    justify-content: center;
 }
 
-.input_mdp {
-    padding: .8em 37px 0 35px;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
-span[id*=mdp_cache] {
-    text-align: end;
-    position: relative;
-    bottom: 35px;
-    right: 10px;
-    height: 0;
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffb5d0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submit-btn:hover {
+    background-color: #ffa5c6;
+}
+
+.hidden {
+    display: none;
 }
