@@ -5,7 +5,7 @@
     <link rel="icon" href="../img/accueil/logo_FGCP.png">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/connexion.css">
-    <script language="JavaScript" src="../script/formulaire.js" type="module"></script>
+    <script language="JavaScript" src="../script/script.js" type="module"></script>
 
     <title>Connexion</title>
 </head>
