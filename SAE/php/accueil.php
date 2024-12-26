@@ -29,7 +29,7 @@ require 'header.php';       //barre de nav des pages
 
         <h3 class="titre-don">" Offrez la vie, devenez donneur aujourd'hui "</h3>
         <div class="button-container">
-            <a href="/don.html"><button class="custom-button">
+            <a href="don.php"><button class="custom-button">
                 <b>FAIRE UN DON</b>
             </button></a>
         </div>
