@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/connexion.css">
-    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
+    <link rel="icon" href="../assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/connexion.css">
+    <script language="JavaScript" src="../assets/script/script.js" type="module"></script>
 
     <title>Connexion</title>
 </head>
@@ -22,9 +22,9 @@
             </div>
         </div>
 
-        <form id="loginForm" class="hidden" method="post" action="">
+        <form id="loginForm" class="hidden" method="post" action="connexion.php">
             <div class="form-group">
-                <input type="text" name="username" id="username" placeholder="Identifiant" required>
+                <input type="text" name="username" id="username" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <input type="password" name="password" id="password" placeholder="Mot de passe" required>
@@ -32,7 +32,7 @@
             <button type="submit" class="submit-btn">Se connecter</button>
         </form>
 
-        <form id="registerForm" class="hidden" method="post" action="">
+        <form id="registerForm" class="hidden" method="post" action="inscription.php">
             <div class="radio-group">
                 <label>
                     <input type="radio" name="civilite" value="M" required> M

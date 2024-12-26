@@ -1,7 +1,7 @@
 <body>
     <header>
         <div id="logoNom">
-            <img id="logo" src="assets/img/accueil/logo_FGCP.png" alt="logo FGCP" />
+            <img id="logo" src="../assets/img/accueil/logo_FGCP.png" alt="logo FGCP" />
             <h2 id="nom">Fédération France Greffes Cœur et/ou Poumons</h2>
             <nav>
                 <ul type="none">
@@ -14,7 +14,7 @@
             </nav>
             <div id="navMobile">
                 <p class="don"><a href="don.php" title="Faire un don">Faire un don</a></p>
-                <img id="menuMobile" src="assets/img/mobile/menu.png" alt="Menu">
+                <img id="menuMobile" src="../assets/img/mobile/menu.png" alt="Menu">
             </div>
         </div>
         <div>
