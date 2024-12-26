@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/actus.css">
-    <script language="JavaScript" src="../script/script.js" type="module"></script>
-    <script language="JavaScript" src="../script/scriptActu.js" type="module"></script>
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/actus.css">
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
+    <script language="JavaScript" src="assets/script/scriptActu.js" type="module"></script>
 
     <title>Actualités</title>
 </head>
@@ -84,7 +84,7 @@
 
 <!--Ancre ---->
 <a href="#" class="ancre" title="Retour en haut">
-    <img src="../img/ancre.png">
+    <img src="assets/img/ancre.png">
 </a>
 
 <?php require 'footer.php'; ?>

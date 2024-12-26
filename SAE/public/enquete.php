@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/enquete.css">
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/enquete.css">
     <!--<script language="JavaScript" src="../script/enquete.js" type="module"></script>-->
 
 
@@ -202,7 +202,7 @@
 </main>
 
 <?php
-require 'footer.php' ; ?>
+require 'footer.php'; ?>
 </html>
 
 

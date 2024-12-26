@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/connexion.css">
-    <script language="JavaScript" src="../script/script.js" type="module"></script>
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/connexion.css">
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
 
     <title>Connexion</title>
 </head>

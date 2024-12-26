@@ -65,6 +65,10 @@ function afficherPage(page) {
 
         articleContainer.appendChild(clone);
     });
+    articlesPage.forEach(article => {
+        console.log('Article:', article); // Vérifiez l'objet complet
+        console.log('Chemin de l\'image:', article.image); // Vérifiez le chemin exact
+    });
 
     // Mettre à jour le numéro de la page actuelle
     currentPageButton.textContent = currentPage;

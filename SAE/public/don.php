@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/don.css">
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/don.css">
 
-    <script language="JavaScript" src="../script/script.js" type="module"></script>
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
     <title>Don</title>
 </head>
 
@@ -15,7 +15,7 @@
 
 <div id="faire_don">
     <p>Faire un <span class ="mot_rouge">don</span> à notre association</p>
-    <img id="img_don" src="../img/don/don.png">
+    <img id="img_don" src="assets/img/don/don.png">
 </div>
 
 <p class="merci">
@@ -38,14 +38,14 @@
         </div>
         <div id="bloc_img_btn">
             <button>Faire un don par CB via Paypal</button>
-            <img id="img_carte" src="../img/don/bancaire.png" alt="cb">
+            <img id="img_carte" src="assets/img/don/bancaire.png" alt="cb">
         </div>
     </div>
 </div>
 
 <div id="par_cheque">
     <div id="cheque_img">
-        <img id="cheque"  src="../img/don/cheque.png" alt="chèque">
+        <img id="cheque" src="assets/img/don/cheque.png" alt="chèque">
     </div>
     <div id="cheque_text">
         <h3>Par chèque</h3>
@@ -66,14 +66,14 @@
             <a id= "lien" href="francegreffecoeurpoumon@gmail.com">francegreffecoeurpoumon@gmail.com</a>
         </p>
     </div>
-    <img id="virement"  src="../img/don/virement.png">
+    <img id="virement"  src="assets/img/don/virement.png">
 </div>
 
-<img id="coeur" src="../img/don/coeur.png">
+<img id="coeur" src="assets/img/don/coeur.png">
 
 <!--Ancre -->
 <a href="#" class="ancre" title="Retour en haut">
-    <img src="../img/ancre.png">
+    <img src="assets/img/ancre.png">
 </a>
 
 <?php require 'footer.php' ?>
