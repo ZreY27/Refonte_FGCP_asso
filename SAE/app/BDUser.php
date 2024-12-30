@@ -3,7 +3,7 @@
 require 'Utilisateur.php';
 require 'IUserRepository.php';
 
-class BDUser implements \IUserRepository{
+class BDUser implements IUserRepository{
     private PDO $connexion;
 
     public function __construct(\PDO $connexion){
@@ -54,11 +54,12 @@ class BDUser implements \IUserRepository{
         $stmt = $this->connexion->prepare(
             "SELECT * FROM user WHERE email = :email"
         );
+        $stmt->execute(['email' => $email]);
+        $result = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-        $retour= $stmt->fetch(\PDO::FETCH_ASSOC);
-        if($retour === false ){
-            return null;
+        if($result) {
+            return new Utilisateur("", "", "", $result['email'], $result['password']);
         }
-        return new Utilisateur(null, null, null, $retour['email'], $retour['password']);
+        return null;
     }
 }
