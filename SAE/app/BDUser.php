@@ -18,7 +18,7 @@ class BDUser implements IUserRepository{
      */
     public function saveUser(Utilisateur $user) : bool {
         $stmt = $this->connexion->prepare(
-            "INSERT INTO user (civilite, prenom, nom, email, password) VALUES (:civilite, :prenom, :nom, :email, :password)");
+            "INSERT INTO user (civilite, nom, prenom, email, password) VALUES (:civilite, :nom, :prenom, :email, :password)");
 
         return $stmt->execute([
             'email' => $user->getMail(),

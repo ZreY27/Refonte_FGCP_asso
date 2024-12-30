@@ -8,7 +8,7 @@ class Utilisateur
     private string $email;
     private $password;
 
-    public function __construct(string $civilite, string $prenom, string $nom, string $email, string $mdp){
+    public function __construct(string $civilite, string $nom, string $prenom, string $email, string $mdp){
         $this->password = $mdp;
         $this->email = $email;
         $this->nom = $nom;
