@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../assets/img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="../assets/style/connexion.css">
-    <script language="JavaScript" src="../assets/script/script.js" type="module"></script>
+    <link rel="icon" href="./assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/connexion.css">
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
 
     <title>Connexion</title>
 </head>
@@ -51,7 +51,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="password" name="new-password" id="new-password" placeholder="Mot de passe" required>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
             </div>
             <button type="submit" class="submit-btn">S'inscrire</button>
         </form>

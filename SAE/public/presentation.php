@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="../assets/style/presentation.css">
-    <link rel="icon" href="../assets/img/accueil/logo_FGCP.png">
-    <script language="JavaScript" src="../assets/script/script.js" type="module"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/presentation.css">
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
     <title>Présentation</title>
 </head>
 
@@ -16,7 +16,7 @@
 <div class="wrapper">
     <div class = "text-box">
         <h3>Presentation de la Federation France Greffe Coeur et/ou Poumons</h3>
-        <img id ="logo1" src="../assets/img/accueil/logo_FGCP.png" alt ="">
+        <img id ="logo1" src="assets/img/accueil/logo_FGCP.png" alt ="">
         <p>Apres plusieurs heures de travail, les membres du conseil d'administration de la Federation Française des Associations des Greffes du Coeur ou
             des Poumons ont souhaite modifier l'intitule de leur Federation afin de la rendre plus concise.
             <br>C'est pourquoi, lors de l'Assemble Générale Extraordinaire du <b>4 juin 2016</b> la dénomination
@@ -46,7 +46,7 @@
             </ul>
         </div>
         <div id="div_img_obj">
-            <img src="../assets/img/presentation/objectifs/objectifs.png" alt="Objectifs" id="img_obj">
+            <img src="assets/img/presentation/objectifs/objectifs.png" alt="Objectifs" id="img_obj">
         </div>
     </div>
 </div>
@@ -59,11 +59,11 @@
                 <h4>Le mot de Thierry GESSON, nouveau président de la fédération : </h4>
                 <div class="thierry">
                     <div class="thierry_img">
-                        <img src="../assets/img/presentation/présidents/thierry.png" alt="Thierry GESSON" id="thierry_img">
+                        <img src="assets/img/presentation/présidents/thierry.png" alt="Thierry GESSON" id="thierry_img">
                     </div>
                     <div class="thierry_texte">
                         <blockquote>
-                            <img src="../assets/img/presentation/présidents/quoteGauche.png" alt="" id="thierryGauche">
+                            <img src="assets/img/presentation/présidents/quoteGauche.png" alt="" id="thierryGauche">
                             <p>Je m’appelle Thierry Gesson, j’ai été greffé il y a 17 ans au CHU de Rangueil à Toulouse.<br>
                                 <br>
                                 Je me suis investi dans le monde associatif avec Midi Cardio Greffes il y a une quinzaine d’année,
@@ -73,7 +73,7 @@
                                 la Fédération des Greffés Cœur et/ou Poumons, dont j’espère pouvoir faire perpétué son travail.<br>
                                 <br>
                                 Je m’entours d’une équipe dynamique pour mener à bien tous les projets que nous avons pour la Fédération.
-                                <img src="../assets/img/presentation/présidents/quoteDroit.png" alt="" id="thierryDroit">
+                                <img src="assets/img/presentation/présidents/quoteDroit.png" alt="" id="thierryDroit">
                                 <br><br>
                             </p>
                             <cite><b>- Thierry GESSON</b></cite>
@@ -89,7 +89,7 @@
                     <div class="claire_texte">
                         <blockquote>
                             <p>
-                                <img src="../assets/img/presentation/présidents/quoteGauche.png" alt="" id="claireGauche">
+                                <img src="assets/img/presentation/présidents/quoteGauche.png" alt="" id="claireGauche">
                                 Ayant eu la chance de bénéficier d’une greffe cardiaque en janvier 1998, j’ai été sollicitée par un membre du bureau de Cardio Greffes Ile de France pour intégrer leur association.
                                 <br><br>
                                 Après avoir été « promue » à différents postes à Cardio Greffes Ile de France, j’ai accepté de nouvelles missions.
@@ -102,14 +102,14 @@
                                 <br>
                                 <br>C’est avec plaisir que je passe le flambeau de la présidence à Monsieur Thierry Gesson, celui-ci est aussi Président de l’Association Midi-Cardio Greffes Occitanie.
                                 <br>Je lui souhaite une belle réussite et bon courage.
-                                <img src="../assets/img/presentation/présidents/quoteDroit.png" alt="" id="claireDroit">
+                                <img src="assets/img/presentation/présidents/quoteDroit.png" alt="" id="claireDroit">
                                 <br><br>
                             </p>
                             <cite><b>- Claire MACABIAU</b></cite>
                         </blockquote>
                     </div>
                     <div class="claire_img">
-                        <img src="../assets/img/presentation/présidents/claire.png" alt="Claire MACABIAU" id="imageClaire">
+                        <img src="assets/img/presentation/présidents/claire.png" alt="Claire MACABIAU" id="imageClaire">
                     </div>
                 </div>
             </div>
@@ -122,31 +122,31 @@
     <div class="compo">
         <div class="compo1">
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/thierry_gesson.jpg" alt="Thierry GESSON" class="img_bureau">
+                <img src="assets/img/presentation/bureau/thierry_gesson.jpg" alt="Thierry GESSON" class="img_bureau">
                 <p class="nom"><b>Thierry GESSON</b></p><p class="role">Président</p>
             </div>
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/daniel_jouen.jpg" alt="Daniel JOUEN" class="img_bureau">
+                <img src="assets/img/presentation/bureau/daniel_jouen.jpg" alt="Daniel JOUEN" class="img_bureau">
                 <p class="nom"><b>Daniel JOUEN</b></p><p class="role">Secrétaire</p>
             </div>
         </div>
         <div class="compo2">
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/michel_stragier.jpg" alt="Michel STRAGIER" class="img_bureau">
+                <img src="assets/img/presentation/bureau/michel_stragier.jpg" alt="Michel STRAGIER" class="img_bureau">
                 <p class="nom"><b>Michel STRAGIER</b></p><p class="role">Premier Vice-Président</p>
             </div>
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/rachel_main.jpg" alt="Rachel MAIN" class="img_bureau">
+                <img src="assets/img/presentation/bureau/rachel_main.jpg" alt="Rachel MAIN" class="img_bureau">
                 <p class="nom"><b>Rachel MAIN</b></p><p class="role">Secrétaire Adjointe</p>
             </div>
         </div>
         <div class="compo3">
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/pascal_bondenant.jpg" alt="Pascal BONDENANT" class="img_bureau">
+                <img src="assets/img/presentation/bureau/pascal_bondenant.jpg" alt="Pascal BONDENANT" class="img_bureau">
                 <p class="nom"><b>Pascal BONDENANT</b></p><p class="role">Deuxième Vice-Président</p>
             </div>
             <div class="photoNom">
-                <img src="../assets/img/presentation/bureau/jacques_deslandes.jpg" alt="Jacques DESLANDES" class="img_bureau">
+                <img src="assets/img/presentation/bureau/jacques_deslandes.jpg" alt="Jacques DESLANDES" class="img_bureau">
                 <p class="nom"><b>Jacques DESLANDES</b></p><p class="role">Trésorier</p>
             </div>
         </div>
@@ -155,7 +155,7 @@
 
 <!--Ancre -->
 <a href="#" class="ancre" title="Retour en haut">
-    <img src="../assets/img/ancre.png">
+    <img src="assets/img/ancre.png">
 </a>
 
 <?php require 'footer.php' ?>

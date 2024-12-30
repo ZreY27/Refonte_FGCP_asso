@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/img/accueil/logo_FGCP.png">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="stylesheet" href="../assets/style/accueil.css">
-    <script language="JavaScript" src="../assets/script/script.js" type="module"></script>
-    <script src="../assets/script/carroussel.js" type="module"></script>
+    <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/accueil.css">
+    <script language="JavaScript" src="assets/script/script.js" type="module"></script>
+    <script src="assets/script/carroussel.js" type="module"></script>
     <title>Accueil</title>
 </head>
 
@@ -19,9 +19,9 @@ require 'header.php';       //barre de nav des pages
 
         <div class="carrousel">
             <div class="slides">
-                <img src="../assets/img/accueil/image-carrousel1.jpg" alt="Image 1">
-                <img src="../assets/img/accueil/image-carrousel2.jpg" alt="Image 2">
-                <img src="../assets/img/accueil/image-carrousel3.jpg" alt="Image 3">
+                <img src="assets/img/accueil/image-carrousel1.jpg" alt="Image 1">
+                <img src="assets/img/accueil/image-carrousel2.jpg" alt="Image 2">
+                <img src="assets/img/accueil/image-carrousel3.jpg" alt="Image 3">
             </div>
             <button class="prev" >&#10094;</button>
             <button class="next" >&#10095;</button>
@@ -81,13 +81,13 @@ En France, le taux de survie à <b>5 ans</b> après une greffe de cœur est d'en
 
         <div class="ruban">
             <h4>Un symbole commun pour les associations</h4>
-            <img src="../assets/img/accueil/ruban.png" alt="ruban vert">
+            <img src="assets/img/accueil/ruban.png" alt="ruban vert">
             <p>Ce symbole rappelle que nous sommes tous donneurs d’organes et la gratitude de la société à l’égard des donneurs.</p>
         </div>
 
         <!--Ancre -->
         <a href="#" class="ancre" title="Retour en haut">
-            <img src="../assets/img/ancre.png">
+            <img src="assets/img/ancre.png">
         </a>
 
 <?php require 'footer.php'; //appelle le fichier contenant le footer
