@@ -1,4 +1,6 @@
 <?php
+if(!session_id())
+    session_start();
 
 require 'debug.php';
 require_once '../../vendor/autoload.php';
