@@ -50,7 +50,6 @@ class BDUser implements IUserRepository{
      * @return Utilisateur|null
      */
     public function findUserByEmail(string $email) : ?Utilisateur {
-        // TODO: Implement findUserByEmail() method.
         $stmt = $this->connexion->prepare(
             "SELECT * FROM user WHERE email = :email"
         );
@@ -58,7 +57,7 @@ class BDUser implements IUserRepository{
         $result = $stmt->fetch(\PDO::FETCH_ASSOC);
 
         if($result) {
-            return new Utilisateur("", "", "", $result['email'], $result['password']);
+            return new Utilisateur($result['civilite'], $result['nom'], $result['prenom'], $result['email'], $result['password']);
         }
         return null;
     }

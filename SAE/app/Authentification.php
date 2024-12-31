@@ -36,10 +36,13 @@ class Authentification {
     return true;
   }
 
-    private function invalideEmail(string $email): bool {
-        $email = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
-        return !filter_var($email, FILTER_VALIDATE_EMAIL);
-    }
+  private function invalideEmail(string $email): bool {
+      $email = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
+      return !filter_var($email, FILTER_VALIDATE_EMAIL);
+  }
 
-
+  public function getUser(string $email): ?Utilisateur
+  {
+      return $this->userRepository->findUserByEmail($email);
+  }
 }

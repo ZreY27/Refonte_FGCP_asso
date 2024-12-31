@@ -1,6 +1,7 @@
 <?php
-if(!session_id())
+if (!session_id()) {
     session_start();
+}
 
 require 'debug.php';
 require '../app/Authentification.php';
@@ -9,34 +10,48 @@ require '../app/BDUser.php';
 require_once '../../vendor/autoload.php';
 
 $bdd = new BDDConnect();
-
 $pdo = $bdd->getConnection();
 $trousseau = new BDUser($pdo);
 $auth = new Authentification($trousseau);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? null;
+    $password = $_POST['password'] ?? null;
 
     try {
-        $retour = $auth->authenticate($_POST['username'], $_POST['password']);
-        $message = "Authentification réussie";
-        $code = "success";
+        // Authentification
+        if ($auth->authenticate($username, $password)) {
+            // Récupérer les données utilisateur
+            $utilisateur = $auth->getUser($username);
 
+            if ($utilisateur) {
+                // Stocker les informations utilisateur dans la session
+                $_SESSION['user'] = [
+                    'nom' => $utilisateur->getNom(),
+                    'prenom' => $utilisateur->getPrenom(),
+                    'email' => $utilisateur->getMail(),
+                ];
+                $_SESSION['flash']['success'] = "Connexion réussie. Bienvenue, " . htmlspecialchars($utilisateur->getPrenom()) . " !";
+
+                // Redirection vers la page formulaire
+                header('Location: formulaire.php');
+                exit;
+            } else {
+                throw new Exception("Impossible de récupérer les informations de l'utilisateur.");
+            }
+        } else {
+            throw new Exception("Nom d'utilisateur ou mot de passe incorrect.");
+        }
     } catch (Exception $e) {
-        $retour = false;
-        $message = "Authentification impossible : " . $e->getMessage();
-        $code = "warning";
-    }
+        // En cas d'erreur, afficher un message
+        $_SESSION['flash']['error'] = "Authentification impossible : " . $e->getMessage();
 
-    $_SESSION['flash'][$code] = $message;
-
-    $direction = $_SERVER['HTTP_ORIGIN'];
-    if($code === "success") {
-        header("Location: $direction/index.php");
-    }
-    else{
-        header("Location: $direction/formulaire.php");
+        // Redirection vers le formulaire de connexion
+        header('Location: formulaire.php');
+        exit;
     }
 }
+
 
 //if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //    $user['identifiant'] = $_POST['username'];
