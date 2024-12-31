@@ -12,7 +12,7 @@ messageFlash();
     <meta charset="UTF-8">
     <link rel="icon" href="./assets/img/accueil/logo_FGCP.png">
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/connexion.css">
+    <link rel="stylesheet" href="assets/style/formulaire.css">
     <script language="JavaScript" src="assets/script/script.js" type="module"></script>
     <title>Connexion</title>
 </head>
@@ -29,10 +29,10 @@ messageFlash();
                 <p><strong>Prénom :</strong> <?= htmlspecialchars($_SESSION['user']['prenom']) ?></p>
                 <p><strong>Email :</strong> <?= htmlspecialchars($_SESSION['user']['email']) ?></p>
                 <br>
-                <a href="enquete.php" class="button">Accéder à l'enquête</a>
+                <p><a href="enquete.php" class="btn-enquete">Accéder à l'enquête</a></p>
                 <br>
                 <form method="post" action="deconnexion.php">
-                    <button type="submit" class="logout-btn">Se déconnecter</button>
+                    <button type="submit" class="btn-deconnexion">Se déconnecter</button>
                 </form>
             </div>
         <?php else: ?>

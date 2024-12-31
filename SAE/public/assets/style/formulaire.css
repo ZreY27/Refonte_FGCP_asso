@@ -1,11 +1,12 @@
-body {
+*{
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+}
+body{
     margin: 0;
     padding: 0;
     background-color: #f8f1f4;
 }
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -80,4 +81,39 @@ input[type="email"] {
 
 .hidden {
     display: none;
+}
+
+/* bouton "Accéder à l'enquête" */
+.btn-enquete {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-enquete:hover {
+    background-color: #ff4081;
+}
+
+/* bouton "Se déconnecter" */
+.btn-deconnexion {
+    display: inline-block;
+    background-color: #e63c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-deconnexion:hover {
+    background-color: #a50202;
 }

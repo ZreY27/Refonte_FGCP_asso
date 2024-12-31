@@ -1,3 +1,10 @@
+<?php
+if (!session_id()) {
+    session_start();
+}
+require_once '../app/msg.php';
+messageFlash();
+?>
 <!DOCTYPE html>
 <HTML lang="en">
 <head>

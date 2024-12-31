@@ -25,7 +25,7 @@ menuButton.addEventListener('click', function() {
     if (nav.style.display === 'none' || nav.style.display === '') {
         nav.style.display = 'block';
         setTimeout(() => {
-            nav.style.maxHeight = '250px';        }, 0);
+            nav.style.maxHeight = '280px';        }, 0);
     }
     else {
         nav.style.maxHeight = '0'; // Ferme le menu

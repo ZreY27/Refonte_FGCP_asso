@@ -8,7 +8,15 @@
                     <li><a href="index.php" title="Accueil">Accueil</a></li>
                     <li><a href="presentation.php" title="Présentation de la FGCP">Qui sommes-nous</a></li>
                     <li><a href="actus.php" title="Voir la page d'actualité">Actus</a></li>
-                    <li><a href="formulaire.php" title="Se connecter ou s'inscrire">Mon compte</a></li>
+                    <li class="menuDeroulant">
+                        <a href="<?php echo isset($_SESSION['user']) ? '#' : 'formulaire.php'; ?>" class="monCompte">Mon compte</a>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <div class="menuDeroulantContenu">
+                                <a href="formulaire.php">Mon profil</a>
+                                <a href="enquete.php">Enquête</a>
+                            </div>
+                        <?php endif; ?>
+                    </li>
                     <li class="don"><a href="don.php" title="Faire un don">Faire un don</a></li>
                 </ul>
             </nav>
