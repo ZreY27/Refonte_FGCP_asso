@@ -1,11 +1,11 @@
 const questions = [
     {
-        question: "Avez-vous déjà donné votre sang ?",
+        question: "Quel est votre statut ?",
         choices: [
-            "Oui, régulièrement",
-            "Oui, une fois",
-            "Non, jamais",
-            "Je ne peux pas donner mon sang"
+            "Gréffé",
+            "Professionnel santé",
+            "Donneur",
+            "Autre"
         ]
     },
     {
@@ -18,12 +18,12 @@ const questions = [
         ]
     },
     {
-        question: "Avez-vous parlé du don d'organes avec votre famille ?",
+        question: "Quel type de soutien aimeriez-vous recevoir le plus de l’association ?",
         choices: [
-            "Oui, nous en avons discuté en détail",
-            "Oui, brièvement",
-            "Non, pas encore",
-            "Non, je ne souhaite pas en parler"
+            "Aide psychologique",
+            "Soutien administratif (démarches, aides sociales, etc.)",
+            "Accès à des groupes de discussion",
+            "Informations médicales sur la greffe",
         ]
     },
     {
@@ -36,12 +36,12 @@ const questions = [
         ]
     },
     {
-        question: "Quelle est votre connaissance du processus de don d'organes ?",
+        question: "Votre emploi a-t-il été adapté à votre condition médicale ?",
         choices: [
-            "Très bonne connaissance",
-            "Connaissance moyenne",
-            "Connaissance limitée",
-            "Aucune connaissance"
+            "Oui, totalement ou partiellement adapté",
+            "Non adapté",
+            "Je ne travaille pas actuellement",
+            "Sans objet (retraité, étudiant, etc.)"
         ]
     },
     {
@@ -54,12 +54,12 @@ const questions = [
         ]
     },
     {
-        question: "Suivez-vous l'actualité concernant les greffes et dons d'organes ?",
+        question: "Ressentez-vous des limitations physiques dans votre vie quotidienne ?",
         choices: [
-            "Oui, très attentivement",
-            "Oui, de temps en temps",
-            "Rarement",
-            "Jamais"
+            "Aucune ou légères limitations",
+            "Limitations modérées",
+            "Limitations importantes",
+            "Je ne suis pas un gréffé"
         ]
     },
     {
@@ -72,12 +72,12 @@ const questions = [
         ]
     },
     {
-        question: "Seriez-vous prêt(e) à devenir bénévole dans une association ?",
+        question: "Habitez-vous près d'un établissement de santé ?",
         choices: [
-            "Oui, je le suis déjà",
-            "Oui, je suis intéressé(e)",
-            "Peut-être plus tard",
-            "Non, ce n'est pas pour moi"
+            "Oui, à moins de 15 minutes",
+            "Oui, entre 15 et 30 minutes",
+            "Entre 30 minutes et 1 heure",
+            "À plus d'une heure"
         ]
     },
     {
