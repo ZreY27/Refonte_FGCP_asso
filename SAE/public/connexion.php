@@ -27,9 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($utilisateur) {
                 // Stocker les informations utilisateur dans la session
                 $_SESSION['user'] = [
+                    'id' => $utilisateur->getId(),
                     'nom' => $utilisateur->getNom(),
                     'prenom' => $utilisateur->getPrenom(),
                     'email' => $utilisateur->getMail(),
+                    'survey' => $utilisateur->isSurveyDone(),
+                    'admin' => $utilisateur->isAdmin(),
                 ];
                 $_SESSION['flash']['success'] = "Connexion réussie. Bienvenue, " . htmlspecialchars($utilisateur->getPrenom()) . " !";
 

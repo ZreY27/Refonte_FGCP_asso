@@ -23,7 +23,17 @@ class BDDConnect {
         nom VARCHAR(30) NOT NULL,
         prenom VARCHAR(30) NOT NULL,
         email VARCHAR(30) NOT NULL UNIQUE,
-        password VARCHAR(30) NOT NULL
+        password VARCHAR(30) NOT NULL,
+        administrator BOOLEAN NOT NULL DEFAULT 0,
+        survey BOOLEAN NOT NULL DEFAULT 0,
+    );
+
+    CREATE TABLE IF NOT EXISTS survey (
+        idSurvey INTEGER PRIMARY KEY AUTOINCREMENT,
+        idUser INTEGER FOREIGN KEY(idUser) REFERENCES user(idUser) NOT NULL,
+        q1 VARCHAR(30) NOT NULL,
+        q2 VARCHAR(30) NOT NULL,
+        q3 VARCHAR(30) NOT NULL
     );
     ";
             $this->pdo->exec($sql);

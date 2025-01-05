@@ -2,8 +2,10 @@
 
 require 'Utilisateur.php';
 require 'IUserRepository.php';
+require 'ISurvey.php';
+require 'Survey.php';
 
-class BDUser implements IUserRepository{
+class BDUser implements IUserRepository, ISurvey {
     private PDO $connexion;
 
     public function __construct(\PDO $connexion){
@@ -61,4 +63,34 @@ class BDUser implements IUserRepository{
         }
         return null;
     }
+
+    public function updateUserSurvey(Utilisateur $user) : bool {
+        $stmt = $this->connexion->prepare(
+            "UPDATE user SET survey = :survey WHERE email = :email");
+
+        return $stmt->execute([
+            'email' => $user->getMail(),
+            'survey' => $user->isSurveyDone()
+        ]);
+    }
+
+    public function saveEnqueteResponses($survey, $email) {
+        $stmt = $this->connexion->prepare(
+            "INSERT INTO survey (idUser, Q1, Q2, Q3) VALUES (:idUser, :Q1, :Q2, :Q3)");
+
+        return $stmt->execute([
+            'emailUser' => $email,
+            'Q1' => $survey->getQ1(),
+            'Q2' => $survey->getQ2(),
+            'Q3' => $survey->getQ3()
+        ]);
+    }
+
+
+    public function updateSurveyStatus($email, $status) {
+        $user = $this->findUserByEmail($email);
+        $user->setSurvey($status);
+        $this->updateUserSurvey($user);
+    }
+
 }

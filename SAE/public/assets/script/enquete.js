@@ -199,10 +199,28 @@ function previousQuestion() {
         displayQuestion(currentQuestion);
     }
 }
-// Redirection à la fin du questionnaire
+
 function submitQuestionnaire() {
-    // Logique de soumission du questionnaire
-    console.log('Questionnaire terminé', answers);
-    alert('Merci d\'avoir complété le questionnaire !');
-    window.location.href = "index.php";
+    // Préparer les données à envoyer
+    const surveyData = {
+        answers: answers.map((answerIndex, questionIndex) => ({
+            question: questions[questionIndex].question,
+            answer: questions[questionIndex].choices[answerIndex]
+        }))
+    };
+
+    // Envoyer les données au serveur
+    fetch('enquete.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(surveyData)
+    })
+        .then(response => response.json())
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Une erreur est survenue lors de l\'envoi de vos réponses.');
+        });
 }
+

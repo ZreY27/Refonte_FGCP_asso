@@ -14,9 +14,13 @@
                             <div class="menuDeroulantContenu">
                                 <a href="formulaire.php">Mon profil</a>
                                 <a href="enquete.php">Enquête</a>
+                                <?php if ($_SESSION['user']['admin']): ?>
+                                    <a href="indicateurs.php">Indicateurs</a>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </li>
+
                     <li class="don"><a href="don.php" title="Faire un don">Faire un don</a></li>
                 </ul>
             </nav>
