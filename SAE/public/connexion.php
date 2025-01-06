@@ -31,6 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'prenom' => $utilisateur->getPrenom(),
                     'email' => $utilisateur->getMail(),
                 ];
+
+                // recup les valeurs de survey et admin de la bd
+                $stmt = $pdo->prepare("SELECT survey, administrator FROM user WHERE email = :email");
+                $mail = $utilisateur->getMail();
+                $stmt->bindParam(':email', $mail, PDO::PARAM_STR);
+                $stmt->execute();
+                $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                // maj de la session
+                if ($userData) {
+                    $_SESSION['user']['survey'] = $userData['survey'];
+                    $_SESSION['user']['administrator'] = $userData['administrator'];
+                }
+
                 $_SESSION['flash']['success'] = "Connexion réussie. Bienvenue, " . htmlspecialchars($utilisateur->getPrenom()) . " !";
 
                 // Redirection vers la page formulaire

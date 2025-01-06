@@ -14,7 +14,7 @@
                             <div class="menuDeroulantContenu">
                                 <a href="formulaire.php">Mon profil</a>
                                 <a href="enquete.php">Enquête</a>
-                                <?php if ($_SESSION['user']['admin']): ?>
+                                <?php if ($_SESSION['user']['administrator']): ?>
                                     <a href="indicateurs.php">Indicateurs</a>
                                 <?php endif; ?>
                             </div>
