@@ -2,7 +2,7 @@
 if (!session_id()) {
     session_start();
 
-    require '../app/BDUser.php';
+    require '../app/BDDConnect.php';
 
     // on récupère les données de la bdd
     $db = new BDDConnect();
@@ -25,14 +25,29 @@ if (!session_id()) {
     <meta charset="UTF-8">
     <link rel="icon" href="assets/img/accueil/logo_FGCP.png">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/indicateurs.css">
     <script language="JavaScript" src="assets/script/indicateurs.js" type="module"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
 
     <title>Indicateurs - France Greffe Coeurs et Poumons</title>
 </head>
 
 <?php require 'header.php'; ?>
-
+<h1> Visualisation du statut des utilisateurs ayant répondu à l'enquête</h1>
+<div id="pie-chart"></div>
+<h1> Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h1>
+<div id="bar-chart"></div>
+<h1>Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h1>
+<table id="response-table">
+    <thead>
+    <tr>
+        <th>Réponse</th>
+        <th>Nombre</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
 <?php require 'footer.php'; ?>
 
