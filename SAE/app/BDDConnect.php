@@ -30,9 +30,9 @@ class BDDConnect {
 
         CREATE TABLE IF NOT EXISTS survey (
             idSurvey INTEGER PRIMARY KEY AUTOINCREMENT,
-            q1 VARCHAR(30) NOT NULL,
-            q2 VARCHAR(30) NOT NULL,
-            q3 VARCHAR(30) NOT NULL,
+            q1 VARCHAR(50) NOT NULL,
+            q2 VARCHAR(50) NOT NULL,
+            q3 VARCHAR(50) NOT NULL,
             FOREIGN KEY(idUser) REFERENCES user(id)
         );
         ";
