@@ -21,6 +21,4 @@ class Survey
     public function getQ3() : string{
         return $this->Q3;
     }
-
-
 }
