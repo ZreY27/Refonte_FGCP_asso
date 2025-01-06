@@ -30,7 +30,6 @@ class BDDConnect {
 
         CREATE TABLE IF NOT EXISTS survey (
             idSurvey INTEGER PRIMARY KEY AUTOINCREMENT,
-            idUser INTEGER NOT NULL,
             q1 VARCHAR(30) NOT NULL,
             q2 VARCHAR(30) NOT NULL,
             q3 VARCHAR(30) NOT NULL,
@@ -46,5 +45,11 @@ class BDDConnect {
 
     public function getConnection(): \PDO {
         return $this->pdo;
+    }
+
+    public function getSurveyAnswersByQuestion($question) {
+        $stmt = $this->pdo->prepare("SELECT `$question` FROM SURVEY");
+        $stmt->execute();
+        return json_encode($stmt->fetchAll(PDO::FETCH_COLUMN));
     }
 }
