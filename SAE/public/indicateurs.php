@@ -34,11 +34,14 @@ if (!session_id()) {
 </head>
 
 <?php require 'header.php'; ?>
-<h1> Visualisation du statut des utilisateurs ayant répondu à l'enquête</h1>
+<h1> Qui a répondu à l'enquête? <br>
+    Visualisation du statut des utilisateurs ayant répondu à l'enquête</h1>
 <div id="pie-chart"></div>
-<h1> Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h1>
+<h1> Besoin de soutien : <br>
+    Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h1>
 <div id="bar-chart"></div>
-<h1>Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h1>
+<h1>Qualité de vie : <br>
+    Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h1>
 <table id="response-table">
     <thead>
     <tr>
