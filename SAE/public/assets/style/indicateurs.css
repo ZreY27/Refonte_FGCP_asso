@@ -1,9 +1,160 @@
-*{
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+:root {
+    --primary-color: #F48FB1; /* Rose principal */
+    --secondary-color: #FF9B94; /* Rose plus clair */
+    --background-color: #FFF5F5; /* Fond légèrement rosé */
+    --font-family: 'Roboto', sans-serif;
+
+    /* Palette de couleurs pour le camembert */
+    --pie-color-1: #F48FB1;
+    --pie-color-2: #F8B6D1;
+    --pie-color-3: #FFB5B0;
+    --pie-color-4: #FFD1CE;
+
 }
-body{
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f1f4;
+}
+
+#resultats h2, h3 {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    font-weight: 600;
+    position: relative;
+}
+
+#resultats h3{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-style: italic; /* Sous-titres en italique */
+
+}
+
+
+#resultats h2::after, h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+}
+
+#pie-chart, #bar-chart {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(230, 116, 107, 0.15);
+}
+
+table#response-table {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(230, 116, 107, 0.15);
+}
+
+#response-table th, #response-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #FFE5E5;
+}
+
+#response-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+#response-table tr:hover {
+    background-color: #FFF0F0;
+}
+
+/* Styles pour les graphiques D3.js */
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 7%;
+    margin: 7% auto;
+    box-shadow: 0 4px 15px rgba(230, 116, 107, 0.15);
+}
+
+/* Style pour les axes et les légendes des graphiques */
+.axis text {
+    font-family: var(--font-family);
+    font-size: 12%;
+}
+
+.axis path, .axis line {
+    stroke: #FFD1D1;
+}
+
+/* Style pour les barres et segments de graphiques */
+.bar {
+    fill: var(--primary-color);
+    transition: opacity 0.1s;
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+.pie-slice {
+    transition: opacity 0.3s;
+}
+
+.pie-slice:hover {
+    opacity: 0.8;
+}
+
+/* Animation de chargement pour les graphiques */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.chart {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(230, 116, 107, 0.15);
+}
+
+.arc path {
+    transition: all 0.3s ease;
+}
+
+.arc:nth-child(1) path { fill: var(--pie-color-1); }
+.arc:nth-child(2) path { fill: var(--pie-color-2); }
+.arc:nth-child(3) path { fill: var(--pie-color-3); }
+.arc:nth-child(4) path { fill: var(--pie-color-4); }
+
+.arc:hover path {
+    opacity: 0.7;
+    filter: brightness(1.1);
+}
+
+.bar {
+    fill: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.bar:hover {
+    fill: var(--secondary-color);
 }

@@ -34,15 +34,16 @@ if (!session_id()) {
 </head>
 
 <?php require 'header.php'; ?>
-<h1> Qui a répondu à l'enquête? <br>
-    Visualisation du statut des utilisateurs ayant répondu à l'enquête</h1>
-<div id="pie-chart"></div>
-<h1> Besoin de soutien : <br>
-    Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h1>
-<div id="bar-chart"></div>
-<h1>Qualité de vie : <br>
-    Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h1>
-<table id="response-table">
+<div id="resultats">
+    <h2> Qui a répondu à l'enquête? <br></h2>
+        <h3>Visualisation du statut des utilisateurs ayant répondu à l'enquête</h3>
+    <div id="pie-chart"></div>
+        <h2> Besoin de soutien : <br></h2>
+        <h3>Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h3>
+    <div id="bar-chart"></div>
+        <h2>Qualité de vie : <br></h2>
+        <h3>Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h3>
+    <table id="response-table">
     <thead>
     <tr>
         <th>Réponse</th>
@@ -51,7 +52,7 @@ if (!session_id()) {
     </thead>
     <tbody></tbody>
 </table>
-
+</div>
 <?php require 'footer.php'; ?>
 
 

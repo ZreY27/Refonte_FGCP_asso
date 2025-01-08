@@ -51,7 +51,7 @@ arcs.append("text")
 //HITOGRAMME EN BATON
 const dataQ2 = Object.entries(countedQ2).map(([key, value]) => ({ category: key, count: value }));
 
-const marginBar = { top: 30, right: 30, bottom: 70, left: 60 };
+const marginBar = { top: 30, right: 30, bottom: 200, left: 60 };
 const widthBar = 460 - marginBar.left - marginBar.right;
 const heightBar = 400 - marginBar.top - marginBar.bottom;
 
