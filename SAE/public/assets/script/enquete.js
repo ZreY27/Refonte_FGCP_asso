@@ -21,7 +21,7 @@ const questions = [
         question: "Quel type de soutien aimeriez-vous recevoir le plus de l’association ?",
         choices: [
             "Aide psychologique",
-            "Soutien administratif (démarches, aides sociales, etc.)",
+            "Soutien administratif (démarches, aides sociales...)",
             "Accès à des groupes de discussion",
             "Informations médicales sur la greffe",
         ]
