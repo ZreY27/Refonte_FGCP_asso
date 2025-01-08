@@ -217,10 +217,29 @@ function submitQuestionnaire() {
         },
         body: JSON.stringify(surveyData)
     })
-        .then(response => response.json())
+        .then(response => response.text()) // Lire la réponse comme du texte brut
+        .then(data => {
+            console.log("Réponse brute du serveur :", data);
+
+            // Si la réponse est du JSON, parsez-la
+            try {
+                const jsonData = JSON.parse(data);
+                console.log("JSON parsé :", jsonData);
+
+                if (jsonData.success) {
+                    window.location.href = 'index.php';
+                } else {
+                    alert("Erreur : " + jsonData.message);
+                }
+            } catch (error) {
+                console.error("Erreur lors du parsing JSON :", error);
+                alert("Le serveur a retourné une réponse invalide.");
+            }
+        })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Erreur lors de la requête :', error);
             alert('Une erreur est survenue lors de l\'envoi de vos réponses.');
         });
+
 }
 

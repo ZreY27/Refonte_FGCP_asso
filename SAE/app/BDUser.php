@@ -77,13 +77,11 @@ class BDUser implements IUserRepository, ISurvey {
     public function saveEnqueteResponses($survey, $email) {
         $stmt = $this->connexion->prepare("SELECT id FROM user WHERE email = :email");
         $stmt->execute(['email' => $email]);
-        $idUser = $stmt->fetchColumn();
 
         $stmt = $this->connexion->prepare(
-            "INSERT INTO survey (idUser, Q1, Q2, Q3) VALUES (:idUser, :Q1, :Q2, :Q3)"
+            "INSERT INTO survey (Q1, Q2, Q3) VALUES (:Q1, :Q2, :Q3)"
         );
         return $stmt->execute([
-            'idUser' => $idUser,
             'Q1' => $survey->getQ1(),
             'Q2' => $survey->getQ2(),
             'Q3' => $survey->getQ3(),

@@ -41,18 +41,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $trousseau->updateSurveyStatus($_SESSION['user']['email'], true);
 
             $_SESSION['flash']['success'] = "Merci d'avoir complété l'enquête !";
+            echo json_encode(['success' => true, 'message' => 'Merci d\'avoir complété l\'enquête !']);
         } else {
             $_SESSION['flash']['error'] = "Erreur lors de l'enregistrement des réponses";
+            echo json_encode(['success' => false, 'message' => 'Erreur lors de l\'enregistrement des réponses']);
         }
     } else {
         $_SESSION['flash']['error'] = "Données invalides";
+        echo json_encode(['success' => false, 'message' => 'Données invalides']);
     }
-    header('Location: index.php');
     exit;
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

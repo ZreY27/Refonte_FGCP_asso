@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ];
 
                 // recup les valeurs de survey et admin de la bd
-                $stmt = $pdo->prepare("SELECT survey, administrator FROM user WHERE email = :email");
+                $stmt = $pdo->prepare("SELECT id, survey, administrator FROM user WHERE email = :email");
                 $mail = $utilisateur->getMail();
                 $stmt->bindParam(':email', $mail, PDO::PARAM_STR);
                 $stmt->execute();
@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($userData) {
                     $_SESSION['user']['survey'] = $userData['survey'];
                     $_SESSION['user']['administrator'] = $userData['administrator'];
+                    $_SESSION['user']['id'] = $userData['id'];
                 }
 
                 $_SESSION['flash']['success'] = "Connexion réussie. Bienvenue, " . htmlspecialchars($utilisateur->getPrenom()) . " !";
