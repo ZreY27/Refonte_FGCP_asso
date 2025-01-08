@@ -20,7 +20,7 @@ body {
     padding: 0;
 }
 
-#resultats h2, h3 {
+#resultats .Indi {
     text-align: center;
     margin: 2rem 0;
     padding: 1rem;
@@ -36,7 +36,7 @@ body {
 }
 
 
-#resultats h2::after, h3::after {
+#resultats .Indi::after {
     content: '';
     display: block;
     width: 60px;
