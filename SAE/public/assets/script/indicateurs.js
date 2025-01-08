@@ -15,12 +15,24 @@ console.log(countedQ2);
 console.log(countedQ3);
 
 const dataQ1 = Object.entries(countedQ1).map(([key, value]) => ({ category: key, count: value }));
+const dataQ2 = Object.entries(countedQ2).map(([key, value]) => ({ category: key, count: value }));
 
 const width = 450;
 const height = 450;
 const radius = Math.min(width, height) / 2;
 
-//CAMEMBERT
+// CAMEMBERT (Pie Chart)
+const tooltipPie = d3.select("#pie-chart")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background", "rgba(0, 0, 0, 0.7)")
+    .style("color", "white")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+    .style("font-size", "14px");
+
 const svgPie = d3.select("#pie-chart")
     .append("svg")
     .attr("width", width)
@@ -29,7 +41,6 @@ const svgPie = d3.select("#pie-chart")
     .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
 const color = d3.scaleOrdinal(d3.schemeCategory10);
-
 const pie = d3.pie().value(d => d.count);
 const arc = d3.arc().innerRadius(0).outerRadius(radius);
 
@@ -41,19 +52,41 @@ const arcs = svgPie.selectAll("arc")
 
 arcs.append("path")
     .attr("d", arc)
-    .attr("fill", d => color(d.data.category));
+    .attr("fill", d => color(d.data.category))
+    .on("mouseover", function(event, d) {
+        tooltipPie.style("visibility", "visible")
+            .text(`${d.data.category}: ${d.data.count} personnes`);
+        d3.select(this).style("opacity", 0.7);  // Opacité réduite pour l'effet de survol
+    })
+    .on("mousemove", function(event) {
+        tooltipPie.style("top", (event.pageY + 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
+    })
+    .on("mouseout", function() {
+        tooltipPie.style("visibility", "hidden");
+        d3.select(this).style("opacity", 1);  // Rétablir l'opacité
+    });
 
 arcs.append("text")
     .attr("transform", d => `translate(${arc.centroid(d)})`)
     .attr("dy", ".35em")
     .text(d => d.data.category);
 
-//HITOGRAMME EN BATON
-const dataQ2 = Object.entries(countedQ2).map(([key, value]) => ({ category: key, count: value }));
-
-const marginBar = { top: 30, right: 30, bottom: 200, left: 60 };
+// HISTOGRAMME (Bar Chart)
+const marginBar = { top: 30, right: 30, bottom: 100, left: 60 };
 const widthBar = 460 - marginBar.left - marginBar.right;
 const heightBar = 400 - marginBar.top - marginBar.bottom;
+
+const tooltipBar = d3.select("#bar-chart")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background", "rgba(0, 0, 0, 0.7)")
+    .style("color", "white")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+    .style("font-size", "14px");
 
 const svgBar = d3.select("#bar-chart")
     .append("svg")
@@ -71,8 +104,9 @@ svgBar.append("g")
     .attr("transform", `translate(0,${heightBar})`)
     .call(d3.axisBottom(xBar))
     .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
+    .attr("transform", "rotate(-45)")
+    .style("text-anchor", "end")
+    .style("font-size", "12px");
 
 const yBar = d3.scaleLinear()
     .domain([0, d3.max(dataQ2, d => d.count)])
@@ -89,11 +123,23 @@ svgBar.selectAll(".bar")
     .attr("y", d => yBar(d.count))
     .attr("width", xBar.bandwidth())
     .attr("height", d => heightBar - yBar(d.count))
-    .attr("fill", "#69b3a2");
+    .attr("fill", "#69b3a2")
+    .on("mouseover", function(event, d) {
+        tooltipBar.style("visibility", "visible")
+            .text(`${d.category}: ${d.count} personnes`);
+        d3.select(this).style("opacity", 0.7);  // Opacité réduite pour l'effet de survol
+    })
+    .on("mousemove", function(event) {
+        tooltipBar.style("top", (event.pageY + 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
+    })
+    .on("mouseout", function() {
+        tooltipBar.style("visibility", "hidden");
+        d3.select(this).style("opacity", 1);  // Rétablir l'opacité
+    });
 
 // TABLEAU
 const dataQ3 = Object.entries(countedQ3).map(([key, value]) => ({ response: key, count: value }));
-
 const tbody = d3.select("#response-table tbody");
 
 dataQ3.forEach(row => {
