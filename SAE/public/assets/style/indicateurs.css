@@ -46,6 +46,8 @@ body {
 }
 
 #pie-chart, #bar-chart {
+    display: flex;
+    justify-content: center;
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;

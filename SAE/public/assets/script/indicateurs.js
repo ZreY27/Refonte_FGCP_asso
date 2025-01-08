@@ -73,9 +73,9 @@ arcs.append("text")
     .text(d => d.data.category);
 
 // HISTOGRAMME (Bar Chart)
-const marginBar = { top: 30, right: 30, bottom: 100, left: 60 };
-const widthBar = 460 - marginBar.left - marginBar.right;
-const heightBar = 400 - marginBar.top - marginBar.bottom;
+const marginBar = { top: 30, right: 30, bottom: 150, left: 60 };  // Augmenter la marge inférieure
+const widthBar = 850 - marginBar.left - marginBar.right;
+const heightBar = 600 - marginBar.top - marginBar.bottom;
 
 const tooltipBar = d3.select("#bar-chart")
     .append("div")
@@ -104,7 +104,7 @@ svgBar.append("g")
     .attr("transform", `translate(0,${heightBar})`)
     .call(d3.axisBottom(xBar))
     .selectAll("text")
-    .attr("transform", "rotate(-45)")
+    .attr("transform", "rotate(-30)")  // Réduire l'angle d'inclinaison
     .style("text-anchor", "end")
     .style("font-size", "12px");
 
@@ -137,6 +137,7 @@ svgBar.selectAll(".bar")
         tooltipBar.style("visibility", "hidden");
         d3.select(this).style("opacity", 1);  // Rétablir l'opacité
     });
+
 
 // TABLEAU
 const dataQ3 = Object.entries(countedQ3).map(([key, value]) => ({ response: key, count: value }));
