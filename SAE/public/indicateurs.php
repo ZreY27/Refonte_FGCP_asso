@@ -39,7 +39,7 @@ if (!session_id()) {
         <h3 class="h3Indi">Visualisation du statut des utilisateurs ayant répondu à l'enquête</h3>
     <div id="pie-chart"></div>
         <h2 class="h2Indi"> Besoin de soutien : <br></h2>
-        <h3 class="h3Indi">Comparaison des différents type de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h3>
+        <h3 class="h3Indi">Comparaison des différents types de soutien que les utilisateurs aimerait reçevoir de la part de l'association</h3>
     <div id="bar-chart"></div>
         <h2 class="h2Indi">Qualité de vie : <br></h2>
         <h3 class="h3Indi">Représentation détaillée en chiffre des personnes ressentant des limitations physiques dans la vie quotidiennes </h3>

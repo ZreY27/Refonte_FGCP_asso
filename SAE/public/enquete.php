@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main>
     <div class="container">
         <div class="header">
-            <h1>Enquête sur nos donneurs</h1>
+            <h1>Enquête sur nos utilisateurs</h1>
         </div>
 
 
