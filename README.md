@@ -3,7 +3,7 @@
 ## 📖 Présentation
 
 Ce projet est une **refonte complète du site web** de l’association **France Greffes Cœur Poumons (FGCP)**, réalisée en **2024** dans le cadre de ma **deuxième année d’études** en informatique.  
-Il a été développé en binôme avec **Rita**, dans un objectif de modernisation, d’accessibilité et de performance du site existant.
+Il a été développé en équipe avec **Rita**, **Lucie** et **Priscilla**, dans un objectif de modernisation, d’accessibilité et de performance du site existant.
 
 ---
 
