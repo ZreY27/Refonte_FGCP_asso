@@ -44,6 +44,8 @@ refonte_site_asso/
 
 - **Antoine**
 - **Rita**
+- **Lucie**
+- **Priscilla**
 
 ---
 
